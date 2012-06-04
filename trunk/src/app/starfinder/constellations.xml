@@ -1,0 +1,1745 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<constellations>
+  <constellation name="Ursa Minor">
+    <stars>
+      <star name="polaris">
+        <ra>2.53030278</ra>
+        <d>89.26417</d>
+      </star>
+      <star name="beta">
+        <ra>14.84536828</ra>
+        <d>74.15556</d>
+      </star>
+      <star name="gamma">
+        <ra>15.34547668</ra>
+        <d>71.83389</d>
+      </star>
+      <star name="delta">
+        <ra>17.53691667</ra>
+        <d>86.58639</d>
+      </star>
+      <star name="epsilon">
+        <ra>16.76613889</ra>
+        <d>82.03722</d>
+      </star>
+      <star name="zeta">
+        <ra>15.73431092</ra>
+        <d>77.79444</d>
+      </star>
+      <star name="eta">
+        <ra>16.291750</ra>
+        <d>75.75528</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="polaris" to="delta"/>
+      <line from="delta" to="epsilon"/>
+      <line from="epsilon" to="zeta"/>
+      <line from="zeta" to="beta"/>
+      <line from="beta" to="gamma"/>
+      <line from="gamma" to="eta"/>
+      <line from="eta" to="zeta"/>
+    </lines>
+  </constellation>
+  <constellation name="Ursa Major">
+    <stars>
+      <star name="dubhe">
+        <ra>11.06213098</ra>
+        <d>61.7508333</d>
+      </star>
+      <star name="merak">
+        <ra>11.03068793</ra>
+        <d>56.3825000</d>
+      </star>
+      <star name="phecda">
+        <ra>11.89717981</ra>
+        <d>53.6947222</d>
+      </star>
+      <star name="megrez">
+        <ra>12.25710018</ra>
+        <d>57.0325000</d>
+      </star>
+      <star name="alioth">
+        <ra>12.90048600</ra>
+        <d>55.9598333</d>
+      </star>
+      <star name="mizar">
+        <ra>13.398750</ra>
+        <d>54.9252778</d>
+      </star>
+      <star name="alkaid">
+        <ra>13.79234382</ra>
+        <d>49.3133333</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="dubhe" to="merak"/>
+      <line from="merak" to="phecda"/>
+      <line from="phecda" to="megrez"/>
+      <line from="megrez" to="alioth"/>
+      <line from="alioth" to="mizar"/>
+      <line from="mizar" to="alkaid"/>
+      <line from="dubhe" to="megrez"/>
+    </lines>
+  </constellation>
+  <constellation name="Leo">
+    <stars>
+      <star name="regulus">
+        <ra>10.13952778</ra>
+        <d>11.9671944</d>
+      </star>
+      <star name="denebola">
+        <ra>11.81766065</ra>
+        <d>14.57205806</d>
+      </star>
+      <star name="gamma">
+        <ra>10.33287516</ra>
+        <d>19.8405556</d>
+      </star>
+      <star name="delta">
+        <ra>11.23513928</ra>
+        <d>20.5240278</d>
+      </star>
+      <star name="epsilon">
+        <ra>9.76418703</ra>
+        <d>23.7742778</d>
+      </star>
+      <star name="dzeta">
+        <ra>10.27817110</ra>
+        <d>23.4173333</d>
+      </star>
+      <star name="eta">
+        <ra>10.12220897</ra>
+        <d>16.7626667</d>
+      </star>
+      <star name="theta">
+        <ra>11.23733457</ra>
+        <d>15.4297500</d>
+      </star>
+      <star name="iota">
+        <ra>11.39873687</ra>
+        <d>10.5296944</d>
+      </star>
+      <star name="kappa">
+        <ra>9.41090531</ra>
+        <d>26.1824444</d>
+      </star>
+      <star name="lambda">
+        <ra>9.52867778</ra>
+        <d>22.9680656</d>
+      </star>
+      <star name="mu">
+        <ra>9.87916667</ra>
+        <d>26.0070833</d>
+      </star>
+      <star name="omicron">
+        <ra>9.6858167</ra>
+        <d>9.8923889</d>
+      </star>
+      <star name="rho">
+        <ra>10.54685324</ra>
+        <d>9.3065833</d>
+      </star>
+      <star name="sigma">
+        <ra>11.35227619</ra>
+        <d>6.0293611</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="regulus" to="eta"/>
+      <line from="omicron" to="eta"/>
+      <line from="rho" to="theta"/>
+      <line from="sigma" to="iota"/>
+      <line from="iota" to="theta"/>
+      <line from="denebola" to="delta"/>
+      <line from="theta" to="delta"/>
+      <line from="delta" to="gamma"/>
+      <line from="gamma" to="dzeta"/>
+      <line from="dzeta" to="mu"/>
+      <line from="mu" to="kappa"/>
+      <line from="kappa" to="lambda"/>
+      <line from="lambda" to="epsilon"/>
+      <line from="epsilon" to="eta"/>
+      <line from="eta" to="theta"/>
+      <line from="eta" to="gamma"/>
+      <line from="mu" to="epsilon"/>
+    </lines>
+  </constellation>
+  <constellation name="Cassiopeia">
+    <stars>
+      <star name="alpha">
+        <ra>0.675122361111111</ra>
+        <d>56.5373311111111</d>
+      </star>
+      <star name="beta">
+        <ra>0.152968105555556</ra>
+        <d>59.1497811111111</d>
+      </star>
+      <star name="gamma">
+        <ra>0.945139188888889</ra>
+        <d>60.7167495555556</d>
+      </star>
+      <star name="delta">
+        <ra>1.43026429722222</ra>
+        <d>60.2352840277778</d>
+      </star>
+      <star name="epsilon">
+        <ra>1.90659046388889</ra>
+        <d>63.6701007777778</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="beta" to="alpha"/>
+      <line from="alpha" to="gamma"/>
+      <line from="gamma" to="delta"/>
+      <line from="delta" to="epsilon"/>
+    </lines>
+  </constellation>
+  <constellation name="Orion">
+    <stars>
+      <star name="betelgeuse">
+        <!-- alpha -->
+        <ra>5.91952925</ra>
+        <d>7.40706277777778</d>
+      </star>
+      <star name="rigel">
+        <!-- beta -->
+        <ra>5.24229780555556</ra>
+        <d>-8.20163836111111</d>
+      </star>
+      <star name="bellatrix">
+        <!-- gamma -->
+        <ra>5.41885090277778</ra>
+        <d>6.34970327777778</d>
+      </star>
+      <star name="mintaka">
+        <!-- delta -->
+        <ra>5.53344444444444</ra>
+        <d>-0.29916666666667</d>
+      </star>
+      <star name="alnilam">
+        <!-- epsilon -->
+        <ra>5.60355555555556</ra>
+        <d>-1.20191666666667</d>
+      </star>
+      <star name="alnitak">
+        <!-- zeta -->
+        <ra>5.67930555555556</ra>
+        <d>-1.94277777777778</d>
+      </star>
+      <star name="saiph">
+        <!-- kappa -->
+        <ra>5.79594134444444</ra>
+        <d>-9.66960491666667</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="betelgeuse" to="bellatrix"/>
+      <line from="bellatrix" to="mintaka"/>
+      <line from="mintaka" to="rigel"/>
+      <line from="rigel" to="saiph"/>
+      <line from="saiph" to="alnitak"/>
+      <line from="alnitak" to="betelgeuse"/>
+      <line from="alnitak" to="alnilam"/>
+      <line from="alnilam" to="mintaka"/>
+    </lines>
+  </constellation>
+  <constellation name="Cygnus">
+    <stars>
+      <star name="deneb">
+        <!-- alpha -->
+        <ra>20.6905277777778</ra>
+        <d>45.2802777777778</d>
+      </star>
+      <star name="beta">
+        <!-- beta -->
+        <ra>19.5120225</ra>
+        <d>27.9596805555556</d>
+      </star>
+      <star name="gamma">
+        <!-- gamma -->
+        <ra>20.3704727333333</ra>
+        <d>40.2566791666667</d>
+      </star>
+      <star name="delta">
+        <!-- delta -->
+        <ra>19.7495773722222</ra>
+        <d>45.1308100277778</d>
+      </star>
+      <star name="epsilon">
+        <!-- epsilon -->
+        <ra>20.7701895444444</ra>
+        <d>33.9702569444444</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="deneb" to="gamma"/>
+      <line from="gamma" to="beta"/>
+      <line from="epsilon" to="gamma"/>
+      <line from="gamma" to="delta"/>
+    </lines>
+  </constellation>
+  <constellation name="Lyra">
+    <stars>
+      <star name="vega">
+        <!-- alpha -->
+        <ra>18.6156490375</ra>
+        <d>38.7836889444444</d>
+      </star>
+      <star name="beta">
+        <!-- beta -->
+        <ra>18.8346653472222</ra>
+        <d>33.3626694444444</d>
+      </star>
+      <star name="gamma">
+        <!-- gamma -->
+        <ra>18.9823951138889</ra>
+        <d>32.6895556388889</d>
+      </star>
+      <star name="delta">
+        <!-- delta -->
+        <ra>18.8954332222222</ra>
+        <d>36.9717211111111</d>
+      </star>
+      <star name="zeta">
+        <ra>18.7461111111111</ra>
+        <d>37.605</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="vega" to="zeta"/>
+      <line from="zeta" to="beta"/>
+      <line from="beta" to="gamma"/>
+      <line from="gamma" to="delta"/>
+      <line from="delta" to="zeta"/>
+    </lines>
+  </constellation>
+  <constellation name="Aquila">
+    <stars>
+      <star name="altair">
+        <ra>19.8463884861111</ra><d>8.86832119444444</d>
+      </star>
+      <star name="delta">
+        <ra>19.4249726083333</ra><d>3.11477947222222</d>
+      </star>
+      <star name="zeta">
+        <ra>19.0901688944444</ra><d>13.8634772777778</d>
+      </star>
+      <star name="lambda">
+        <ra>19.1041497166667</ra><d>-4.88255575</d>
+      </star>
+      <star name="theta">
+        <ra>20.1884125777778</ra><d>-0.82146183333333</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="altair" to="delta"/>
+      <line from="delta" to="lambda"/>
+      <line from="altair" to="zeta"/>
+      <line from="zeta" to="delta"/>
+      <line from="delta" to="theta"/>
+      <line from="theta" to="altair"/>
+    </lines>
+  </constellation>
+  <constellation name="Taurus">
+    <stars>
+      <star name="aldebaran">
+        <ra>4.5986775</ra><d>16.5093027777778</d>
+      </star>
+      <star name="beta">
+        <ra>5.43819816666667</ra><d>28.6076372222222</d>
+      </star>
+      <star name="zeta">
+        <ra>5.62741261666667</ra><d>21.1425441111111</d>
+      </star>
+      <star name="epsilon">
+        <ra>4.47694444444444</ra><d>19.1804166666667</d>
+      </star>
+      <star name="delta">
+        <ra>4.38225</ra><d>17.5425</d>
+      </star>
+      <star name="gamma">
+        <ra>4.32988991666667</ra><d>15.6276422222222</d>
+      </star>
+      <star name="theta">
+        <ra>4.47770575</ra><d>15.8708818055556</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="beta" to="epsilon"/>
+      <line from="epsilon" to="delta"/>
+      <line from="delta" to="gamma"/>
+      <line from="gamma" to="theta"/>
+      <line from="theta" to="aldebaran"/>
+      <line from="aldebaran" to="zeta"/>
+    </lines>
+  </constellation>
+  <constellation name="Gemini">
+    <stars>
+      <star name="castor">
+        <ra>7.57663144166667</ra><d>31.8882822222222</d>
+      </star>
+      <star name="pollux">
+        <ra>7.75526385277778</ra><d>28.0261988888889</d>
+      </star>
+      <star name="upsilon">
+        <ra>7.59869444444444</ra><d>26.8958333333333</d>
+      </star>
+      <star name="kappa">
+        <ra>7.74077777777778</ra><d>24.3980555555556</d>
+      </star>
+      <star name="delta">
+        <ra>7.33538327222222</ra><d>21.9823160277778</d>
+      </star>
+      <star name="lambda">
+        <ra>7.30155555555556</ra><d>16.5402777777778</d>
+      </star>
+      <star name="zeta">
+        <ra>7.068480775</ra><d>20.5702983055556</d>
+      </star>
+      <star name="xi">
+        <ra>6.75482342222222</ra><d>12.8955919722222</d>
+      </star>
+      <star name="gamma">
+        <ra>6.62853069444444</ra><d>16.3992804166667</d>
+      </star>
+      <star name="tau">
+        <ra>7.18565845</ra><d>30.2451619722222</d>
+      </star>
+      <star name="theta">
+        <ra>6.87980555555556</ra><d>33.9611111111111</d>
+      </star>
+      <star name="epsilon">
+        <ra>6.73220173888889</ra><d>25.1311254166667</d>
+      </star>
+      <star name="nu">
+        <ra>6.48277777777778</ra><d>20.2122222222222</d>
+      </star>
+      <star name="mu">
+        <ra>6.38267412777778</ra><d>22.51358275</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="pollux" to="upsilon"/>
+      <line from="upsilon" to="delta"/>
+      <line from="delta" to="lambda"/>
+      <line from="lambda" to="xi"/>
+      <line from="delta" to="zeta"/>
+      <line from="zeta" to="gamma"/>
+      <line from="kappa" to="upsilon"/>
+      <line from="upsilon" to="tau"/>
+      <line from="castor" to="tau"/>
+      <line from="tau" to="theta"/>
+      <line from="tau" to="epsilon"/>
+      <line from="epsilon" to="nu"/>
+      <line from="epsilon" to="mu"/>
+    </lines>
+  </constellation>
+  <constellation name="Aries">
+    <stars>
+      <star name="hamal">
+        <ra>2.11955713888889</ra><d>23.4624175555556</d>
+      </star>
+      <star name="beta">
+        <ra>1.91066971944444</ra><d>20.8080314722222</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="hamal" to="beta"/>
+    </lines>
+  </constellation>
+  <constellation name="Cancer">
+    <stars>
+      <star name="acubens">
+        <ra>8.97478380555556</ra><d>11.8577008333333</d>
+      </star>
+      <star name="beta">
+        <ra>8.27525572222222</ra><d>9.18554472222222</d>
+      </star>
+      <star name="delta">
+        <ra>8.74475</ra><d>18.1541666666667</d>
+      </star>
+      <star name="iota">
+        <ra>8.77827777777778</ra><d>28.76</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="acubens" to="delta"/>
+      <line from="beta" to="delta"/>
+      <line from="delta" to="iota"/>
+    </lines>
+  </constellation>
+  <constellation name="Virgo">
+    <stars>
+      <star name="spica">
+        <ra>13.4198831388889</ra><d>-11.1613219444444</d>
+      </star>
+      <star name="beta">
+        <ra>11.8449217333333</ra><d>1.76471972222222</d>
+      </star>
+      <star name="mu">
+        <ra>14.7176666666667</ra><d>-5.65833333333333</d>
+      </star>
+      <star name="iota">
+        <ra>14.2669166666667</ra><d>-6.00055555555556</d>
+      </star>
+      <star name="tau">
+        <ra>14.0274444444444</ra><d>1.54444444444444</d>
+      </star>
+      <star name="zeta">
+        <ra>13.5782197638889</ra><d>-0.59581936111111</d>
+      </star>
+      <star name="gamma">
+        <ra>12.6943454</ra><d>-1.44937280555556</d>
+      </star>
+      <star name="epsilon">
+        <ra>13.0362771805556</ra><d>10.9591504166667</d>
+      </star>
+      <star name="delta">
+        <ra>12.9267246138889</ra><d>3.39747033333333</d>
+      </star>
+      <star name="theta">
+        <ra>13.1658333333333</ra><d>-5.53888888888889</d>
+      </star>
+      <star name="eta">
+        <ra>12.3317660638889</ra><d>-0.66680819444444</d>
+      </star>
+      <star name="omicron">
+        <ra>12.0868055555556</ra><d>8.73305555555556</d>
+      </star>
+      <star name="nu">
+        <ra>11.7643333333333</ra><d>6.52944444444444</d>
+      </star>
+      <star name="109">
+        <ra>14.7708055555556</ra><d>1.89277777777778</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="109" to="tau"/>
+      <line from="tau" to="zeta"/>
+      <line from="mu" to="iota"/>
+      <line from="iota" to="zeta"/>
+      <line from="zeta" to="gamma"/>
+      <line from="gamma" to="delta"/>
+      <line from="delta" to="epsilon"/>
+      <line from="gamma" to="theta"/>
+      <line from="theta" to="spica"/>
+      <line from="gamma" to="eta"/>
+      <line from="eta" to="omicron"/>
+      <line from="omicron" to="nu"/>
+      <line from="nu" to="beta"/>
+      <line from="beta" to="eta"/>
+    </lines>
+  </constellation>
+  <constellation name="Libra">
+    <stars>
+      <star name="zubenelgenubi">
+        <ra>14.8447724916667</ra><d>-15.9972356111111</d>
+      </star>
+      <star name="beta">
+        <ra>15.2834482833333</ra><d>-9.38291441666667</d>
+      </star>
+      <star name="gamma">
+        <ra>15.5920944444444</ra><d>-14.4562222222222</d>
+      </star>
+      <star name="upsilon">
+        <ra>15.6170722222222</ra><d>-28.1350833333333</d>
+      </star>
+      <star name="sigma">
+        <ra>15.0678378</ra><d>-25.2819612777778</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="zubenelgenubi" to="beta"/>
+      <line from="zubenelgenubi" to="gamma"/>
+      <line from="zubenelgenubi" to="sigma"/>
+      <line from="beta" to="gamma"/>
+      <line from="gamma" to="upsilon"/>
+    </lines>
+  </constellation>
+  <constellation name="Scorpius">
+    <stars>
+      <star name="antares">
+        <ra>16.49</ra><d>-26.4319444444444</d>
+      </star>
+      <star name="lambda">
+        <ra>17.5601444444444</ra><d>-37.1038222222222</d>
+      </star>
+      <star name="kappa">
+        <ra>17.708132</ra><d>-39.0299830833333</d>
+      </star>
+      <star name="iota">
+        <ra>17.7930780916667</ra><d>-40.1269970277778</d>
+      </star>
+      <star name="theta">
+        <ra>17.6219805138889</ra><d>-42.997828</d>
+      </star>
+      <star name="eta">
+        <ra>17.2025543472222</ra><d>-43.2391918055556</d>
+      </star>
+      <star name="zeta">
+        <ra>16.8999240277778</ra><d>-42.3620295277778</d>
+      </star>
+      <star name="mu">
+        <ra>16.8645086416667</ra><d>-38.0473803888889</d>
+      </star>
+      <star name="epsilon">
+        <ra>16.8360555555556</ra><d>-34.2933333333333</d>
+      </star>
+      <star name="sigma">
+        <ra>16.3531432527778</ra><d>-25.5927920833333</d>
+      </star>
+      <star name="beta">
+        <ra>16.0906199944444</ra><d>-19.8054527777778</d>
+      </star>
+      <star name="delta">
+        <ra>16.0055570222222</ra><d>-22.6217064166667</d>
+      </star>
+      <star name="pi">
+        <ra>15.9808647888889</ra><d>-26.1141079444444</d>
+      </star>
+      <star name="rho">
+        <ra>15.9480833333333</ra><d>-29.2141666666667</d>
+      </star>
+-    </stars>
+    <lines>
+      <line from="lambda" to="kappa"/>
+      <line from="kappa" to="iota"/>
+      <line from="iota" to="theta"/>
+      <line from="theta" to="eta"/>
+      <line from="eta" to="zeta"/>
+      <line from="zeta" to="mu"/>
+      <line from="mu" to="epsilon"/>
+      <line from="epsilon" to="antares"/>
+      <line from="antares" to="sigma"/>
+      <line from="sigma" to="beta"/>
+      <line from="sigma" to="delta"/>
+      <line from="sigma" to="pi"/>
+      <line from="sigma" to="rho"/>
+      <line from="beta" to="delta"/>
+      <line from="delta" to="pi"/>
+      <line from="pi" to="rho"/>
+    </lines>
+  </constellation>
+  <constellation name="Sagittarius">
+    <stars>
+      <star name="kaus australis">
+        <ra>18.4028662222222</ra><d>-34.3846164722222</d>
+      </star>
+      <star name="gamma">
+        <ra>18.09680225</ra><d>-30.4240898611111</d>
+      </star>
+      <star name="delta">
+        <ra>18.3499009833333</ra><d>-29.8281016388889</d>
+      </star>
+      <star name="zeta">
+        <ra>19.0435361777778</ra><d>-29.8800633055556</d>
+      </star>
+      <star name="tau">
+        <ra>19.1156691583333</ra><d>-27.6704219166667</d>
+      </star>
+      <star name="sigma">
+        <ra>18.9210906944444</ra><d>-26.2967241111111</d>
+      </star>
+      <star name="phi">
+        <ra>18.7609405833333</ra><d>-26.9907762222222</d>
+      </star>
+      <star name="lambda">
+        <ra>18.4661779777778</ra><d>-25.4216985</d>
+      </star>
+      <star name="mu">
+        <ra>18.2293888888889</ra><d>-21.0588888888889</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="kaus australis" to="gamma"/>
+      <line from="kaus australis" to="delta"/>
+      <line from="kaus australis" to="zeta"/>
+      <line from="zeta" to="tau"/>
+      <line from="zeta" to="phi"/>
+      <line from="tau" to="sigma"/>
+      <line from="sigma" to="phi"/>
+      <line from="phi" to="delta"/>
+      <line from="phi" to="lambda"/>
+      <line from="lambda" to="mu"/>
+      <line from="lambda" to="delta"/>
+      <line from="delta" to="gamma"/>
+    </lines>
+  </constellation>
+  <constellation name="Capricornus">
+    <stars>
+      <star name="alpha">
+        <ra>20.2941388888889</ra><d>-12.5083333333333</d>
+      </star>
+      <star name="omega">
+        <ra>20.8636944444444</ra><d>-26.9191666666667</d>
+      </star>
+      <star name="zeta">
+        <ra>21.4444444444444</ra><d>-22.4113888888889</d>
+      </star>
+      <star name="delta">
+        <ra>21.7840122888889</ra><d>-16.1272870833333</d>
+      </star>
+      <star name="theta">
+        <ra>21.0991111111111</ra><d>-17.2327777777778</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="alpha" to="omega"/>
+      <line from="omega" to="zeta"/>
+      <line from="zeta" to="delta"/>
+      <line from="delta" to="theta"/>
+      <line from="theta" to="alpha"/>
+    </lines>
+  </constellation>
+  <constellation name="Aquarius">
+    <stars>
+      <star name="psi">
+        <ra>23.2648611111111</ra><d>-9.08777777777778</d>
+      </star>
+      <star name="delta">
+        <ra>22.9108368055556</ra><d>-15.8208202777778</d>
+      </star>
+      <star name="tau">
+        <ra>22.7952134444444</ra><d>-14.0564283333333</d>
+      </star>
+      <star name="phi">
+        <ra>23.2387110277778</ra><d>-6.04900277777778</d>
+      </star>
+      <star name="lambda">
+        <ra>22.8769099722222</ra><d>-7.57959916666667</d>
+      </star>
+      <star name="theta">
+        <ra>22.2805656666667</ra><d>-7.78329027777778</d>
+      </star>
+      <star name="alpha">
+        <ra>22.0963988694444</ra><d>-0.31984911111111</d>
+      </star>
+      <star name="pi">
+        <ra>22.4212842222222</ra><d>1.37740055555556</d>
+      </star>
+      <star name="gamma">
+        <ra>22.3609376166667</ra><d>-1.38733419444444</d>
+      </star>
+      <star name="beta">
+        <ra>21.5259810305556</ra><d>-5.57117555555556</d>
+      </star>
+      <star name="epsilon">
+        <ra>20.7945976388889</ra><d>-9.49577583333333</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="psi" to="delta"/>
+      <line from="psi" to="phi"/>
+      <line from="phi" to="lambda"/>
+      <line from="delta" to="tau"/>
+      <line from="tau" to="lambda"/>
+      <line from="lambda" to="theta"/>
+      <line from="theta" to="alpha"/>
+      <line from="alpha" to="pi"/>
+      <line from="alpha" to="gamma"/>
+      <line from="alpha" to="beta"/>
+      <line from="beta" to="epsilon"/>
+    </lines>
+  </constellation>
+  <constellation name="Pisces">
+    <stars>
+      <star name="tau">
+        <ra>1.19433333333333</ra><d>30.0897222222222</d>
+      </star>
+      <star name="phi">
+        <ra>1.22915197222222</ra><d>24.5837130555556</d>
+      </star>
+      <star name="alpha">
+        <ra>2.03411658888889</ra><d>2.76376138888889</d>
+      </star>
+      <star name="epsilon">
+        <ra>1.04905833333333</ra><d>7.89013888888889</d>
+      </star>
+      <star name="omega">
+        <ra>23.9885248888889</ra><d>6.86332111111111</d>
+      </star>
+      <star name="iota">
+        <ra>23.6658444444444</ra><d>5.62627777777778</d>
+      </star>
+      <star name="theta">
+        <ra>23.4661375277778</ra><d>6.37899222222222</d>
+      </star>
+      <star name="gamma">
+        <ra>23.2860937472222</ra><d>3.28228833333333</d>
+      </star>
+      <star name="kappa">
+        <ra>23.4488764722222</ra><d>1.25560805555556</d>
+      </star>
+      <star name="lambda">
+        <ra>23.7007795</ra><d>1.78004083333333</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="tau" to="phi"/>
+      <line from="phi" to="alpha"/>
+      <line from="alpha" to="epsilon"/>
+      <line from="epsilon" to="omega"/>
+      <line from="omega" to="iota"/>
+      <line from="iota" to="theta"/>
+      <line from="theta" to="gamma"/>
+      <line from="gamma" to="kappa"/>
+      <line from="kappa" to="lambda"/>
+      <line from="lambda" to="iota"/>
+    </lines>
+  </constellation>
+  <constellation name="Auriga">
+    <stars>
+      <star name="capella">
+        <ra>5.27815530555556</ra><d>45.9979911111111</d>
+      </star>
+      <star name="iota">
+        <ra>4.94989474722222</ra><d>33.1660995833333</d>
+      </star>
+      <star name="beta taurus">
+        <ra>5.43819816666667</ra><d>28.6076372222222</d>
+      </star>
+      <star name="theta">
+        <ra>5.99535281111111</ra><d>37.2125846388889</d>
+      </star>
+      <star name="beta">
+        <ra>5.99214525833333</ra><d>44.9474325833333</d>
+      </star>
+      <star name="delta">
+        <ra>5.99212127777778</ra><d>54.2846561111111</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="capella" to="delta"/>
+      <line from="capella" to="beta"/>
+      <line from="capella" to="iota"/>
+      <line from="iota" to="beta taurus"/>
+      <line from="beta taurus" to="theta"/>
+    </lines>
+  </constellation>
+  <constellation name="Bootes">
+    <stars>
+      <star name="arcturus">
+        <ra>14.2610277777778</ra><d>19.1822222222222</d>
+      </star>
+      <star name="eta">
+        <ra>13.9114108111111</ra><d>18.3893873888889</d>
+      </star>
+      <star name="zeta">
+        <ra>14.6835976611111</ra><d>13.7283046388889</d>
+      </star>
+      <star name="rho">
+        <ra>14.5304971944444</ra><d>30.3714372222222</d>
+      </star>
+      <star name="epsilon">
+        <ra>14.7497826277778</ra><d>27.0742249722222</d>
+      </star>
+      <star name="delta">
+        <ra>15.2583785972222</ra><d>33.3148312777778</d>
+      </star>
+      <star name="gamma">
+        <ra>14.5346310833333</ra><d>38.3082525</d>
+      </star>
+      <star name="beta">
+        <ra>15.0324339944444</ra><d>40.3905668333333</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="arcturus" to="eta"/>
+      <line from="arcturus" to="zeta"/>
+      <line from="arcturus" to="rho"/>
+      <line from="arcturus" to="epsilon"/>
+      <line from="epsilon" to="delta"/>
+      <line from="delta" to="beta"/>
+      <line from="beta" to="gamma"/>
+      <line from="gamma" to="rho"/>
+    </lines>
+  </constellation>
+  <constellation name="Corona Borealis">
+    <stars>
+      <star name="alphekka">
+        <ra>15.5781388888889</ra><d>26.7145555555556</d>
+      </star>
+      <star name="iota">
+        <ra>16.0240277777778</ra><d>29.8510555555556</d>
+      </star>
+      <star name="epsilon">
+        <ra>15.9316666666667</ra><d>26.9833333333333</d>
+      </star>
+      <star name="delta">
+        <ra>15.8033333333333</ra><d>26.2</d>
+      </star>
+      <star name="gamma">
+        <ra>15.7123888888889</ra><d>26.2954722222222</d>
+      </star>
+      <star name="beta">
+        <ra>15.4637777777778</ra><d>29.1060555555556</d>
+      </star>
+      <star name="theta">
+        <ra>15.5488333333333</ra><d>31.3590833333333</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="iota" to="epsilon"/>
+      <line from="epsilon" to="delta"/>
+      <line from="delta" to="gamma"/>
+      <line from="gamma" to="alphekka"/>
+      <line from="alphekka" to="beta"/>
+      <line from="beta" to="theta"/>
+    </lines>
+  </constellation>
+  <constellation name="Hercules">
+    <stars>
+      <star name="alpha">
+        <ra>17.2441111111111</ra><d>14.3902777777778</d>
+      </star>
+      <star name="beta">
+        <ra>16.5036665416667</ra><d>21.4896113333333</d>
+      </star>
+      <star name="delta">
+        <ra>17.2505307222222</ra><d>24.8392041666667</d>
+      </star>
+      <star name="epsilon">
+        <ra>17.0048260555556</ra><d>30.9264047222222</d>
+      </star>
+      <star name="zeta">
+        <ra>16.6881002888889</ra><d>31.6027186944444</d>
+      </star>
+      <star name="eta">
+        <ra>16.7149348055556</ra><d>38.9222544444444</d>
+      </star>
+      <star name="tau">
+        <ra>16.3290102222222</ra><d>46.3133663888889</d>
+      </star>
+      <!--star name="chi">
+      </star-->
+      <star name="pi">
+        <ra>17.2507873222222</ra><d>36.8091623055556</d>
+      </star>
+      <star name="theta">
+        <ra>17.9375501388889</ra><d>37.2505391666667</d>
+      </star>
+      <star name="iota">
+        <ra>17.6577462222222</ra><d>46.0063319444445</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="alpha" to="beta"/>
+      <line from="beta" to="zeta"/>
+      <line from="zeta" to="epsilon"/>
+      <line from="zeta" to="eta"/>
+      <line from="eta" to="pi"/>
+      <line from="eta" to="tau"/>
+      <!--line from="tau" to="chi"/-->
+      <line from="alpha" to="delta"/>
+      <line from="delta" to="epsilon"/>
+      <line from="epsilon" to="pi"/>
+      <line from="pi" to="theta"/>
+      <line from="theta" to="iota"/>
+    </lines>
+  </constellation>
+  <constellation name="Canis Major">
+    <stars>
+      <star name="sirius">
+        <ra>6.75247702777778</ra><d>-16.7161158333333</d>
+      </star>
+      <star name="beta">
+        <ra>6.37832926388889</ra><d>-17.9559186944444</d>
+      </star>
+      <star name="nu">
+        <ra>6.61138888888889</ra><d>-19.2558333333333</d>
+      </star>
+      <star name="omicron">
+        <ra>6.90220905555556</ra><d>-24.1842108333333</d>
+      </star>
+      <star name="adhara">
+        <ra>6.97711111111111</ra><d>-28.9719444444444</d>
+      </star>
+      <star name="delta">
+        <ra>7.13985724444445</ra><d>-26.3932076111111</d>
+      </star>
+      <star name="eta">
+        <ra>7.40158396666667</ra><d>-29.3031055</d>
+      </star>
+      <star name="iota">
+        <ra>6.93561111111111</ra><d>-17.0541666666667</d>
+      </star>
+      <star name="gamma">
+        <ra>7.06263888888889</ra><d>-15.6333333333333</d>
+      </star>
+      <star name="theta">
+        <ra>6.90316666666667</ra><d>-12.0386111111111</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="sirius" to="beta"/>
+      <line from="beta" to="nu"/>
+      <line from="beta" to="nu"/>
+      <line from="nu" to="omicron"/>
+      <line from="omicron" to="adhara"/>
+      <line from="adhara" to="delta"/>
+      <line from="delta" to="eta"/>
+      <line from="delta" to="sirius"/>
+      <line from="sirius" to="iota"/>
+      <line from="iota" to="gamma"/>
+      <line from="gamma" to="theta"/>
+      <line from="theta" to="iota"/>
+    </lines>
+  </constellation>
+  <constellation name="Canis Minor">
+    <stars>
+      <star name="procyon">
+        <ra>7.65515</ra><d>5.2275</d>
+      </star>
+      <star name="beta">
+        <ra>7.45251944444444</ra><d>8.28941666666667</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="procyon" to="beta"/>
+    </lines>
+  </constellation>
+  <constellation name="Carina">
+    <stars>
+      <star name="canopus">
+        <ra>6.39919166666667</ra><d>-52.6957222222222</d>
+      </star>
+      <star name="miaplacidus">
+        <ra>9.22006666666667</ra><d>-69.7174722222222</d>
+      </star>
+      <star name="omega">
+        <ra>10.2289666666667</ra><d>-70.0379166666667</d>
+      </star>
+      <star name="theta">
+        <ra>10.7159527777778</ra><d>-64.3944722222222</d>
+      </star>
+      <star name="iota">
+        <ra>9.28484166666667</ra><d>-59.27525</d>
+      </star>
+      <star name="avior">
+        <ra>8.37523888888889</ra><d>-59.5095277777778</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="canopus" to="miaplacidus"/>
+      <line from="miaplacidus" to="omega"/>
+      <line from="omega" to="theta"/>
+      <line from="theta" to="iota"/>
+      <line from="iota" to="avior"/>
+    </lines>
+  </constellation>
+  <constellation name="Vela">
+    <stars>
+      <star name="iota carena">
+        <ra>9.28484166666667</ra><d>-59.27525</d>
+      </star>
+      <star name="delta">
+        <ra>8.74505555555555</ra><d>-54.7085555555556</d>
+      </star>
+      <star name="kappa">
+        <ra>9.36856388888889</ra><d>-55.0106944444445</d>
+      </star>
+      <star name="phi">
+        <ra>9.94770833333333</ra><d>-54.5678055555556</d>
+      </star>
+      <star name="mu">
+        <ra>10.7794777777778</ra><d>-49.4201388888889</d>
+      </star>
+      <!--star name="">
+        <ra>...</ra><d>...</d>
+      </star-->
+      <star name="psi">
+        <ra>9.51169722222222</ra><d>-40.4668888888889</d>
+      </star>
+      <star name="lambda">
+        <ra>9.13327222222222</ra><d>-43.4326111111111</d>
+      </star>
+      <star name="gamma">
+        <ra>8.15813888888889</ra><d>-47.3458333333333</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="iota carena" to="delta"/>
+      <line from="delta" to="kappa"/>
+      <line from="kappa" to="phi"/>
+      <line from="phi" to="mu"/>
+      <line from="mu" to="psi"/>
+      <line from="psi" to="lambda"/>
+      <line from="lambda" to="gamma"/>
+      <line from="gamma" to="delta"/>
+    </lines>
+  </constellation>
+  <constellation name="Piscis Austrinus">
+    <stars>
+      <star name="fomalhaut">
+        <ra>22.9607861111111</ra><d>-29.6218333333333</d>
+      </star>
+      <star name="epsilon">
+        <ra>22.6775916666667</ra><d>-27.0436111111111</d>
+      </star>
+      <star name="mu">
+        <ra>22.1397083333333</ra><d>-32.9883888888889</d>
+      </star>
+      <star name="theta">
+        <ra>21.7956027777778</ra><d>-30.8983055555556</d>
+      </star>
+      <star name="iota">
+        <ra>21.7491083333333</ra><d>-33.0255555555556</d>
+      </star>
+      <star name="beta">
+        <ra>22.5250805555556</ra><d>-32.3460277777778</d>
+      </star>
+      <star name="delta">
+        <ra>22.9324694444444</ra><d>-32.5396944444444</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="fomalhaut" to="epsilon"/>
+      <line from="epsilon" to="mu"/>
+      <line from="mu" to="theta"/>
+      <line from="theta" to="iota"/>
+      <line from="iota" to="mu"/>
+      <line from="mu" to="beta"/>
+      <line from="beta" to="delta"/>
+      <line from="delta" to="fomalhaut"/>
+    </lines>
+  </constellation>
+  <constellation name="Centaurus">
+    <stars>
+      <star name="rigil kent">
+        <ra>14.6613611111111</ra><d>-60.8351388888889</d>
+      </star>
+      <star name="hadar">
+        <ra>14.0637333333333</ra><d>-60.3729722222222</d>
+      </star>
+      <star name="epsilon">
+        <ra>13.6647972222222</ra><d>-53.4663611111111</d>
+      </star>
+      <star name="zeta">
+        <ra>13.925675</ra><d>-47.2882777777778</d>
+      </star>
+      <star name="mu">
+        <ra>13.8269472222222</ra><d>-42.4736944444445</d>
+      </star>
+      <star name="menkent">
+        <ra>14.1114777777778</ra><d>-36.3686944444444</d>
+      </star>
+      <star name="tau">
+        <ra>12.628425</ra><d>-48.5412777777778</d>
+      </star>
+      <star name="sigma">
+        <ra>12.4673361111111</ra><d>-50.2306111111111</d>
+      </star>
+      <star name="pi">
+        <ra>11.3501222222222</ra><d>-54.4910277777778</d>
+      </star>
+      <star name="omicron">
+        <ra>11.5294638888889</ra><d>-59.4420555555556</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="rigil kent" to="hadar"/>
+      <line from="hadar" to="epsilon"/>
+      <line from="epsilon" to="zeta"/>
+      <line from="zeta" to="mu"/>
+      <line from="mu" to="menkent"/>
+      <line from="zeta" to="tau"/>
+      <line from="epsilon" to="tau"/>
+      <line from="tau" to="sigma"/>
+      <line from="sigma" to="pi"/>
+      <line from="sigma" to="omicron"/>
+    </lines>
+  </constellation>
+  <constellation name="Grus">
+    <stars>
+      <star name="alnair">
+        <ra>22.1371888888889</ra><d>-46.9606111111111</d>
+      </star>
+      <star name="beta">
+        <ra>22.7110916666667</ra><d>-46.8845555555556</d>
+      </star>
+      <star name="epsilon">
+        <ra>22.8092222222222</ra><d>-51.3166944444445</d>
+      </star>
+      <star name="zeta">
+        <ra>23.0146861111111</ra><d>-52.7541111111111</d>
+      </star>
+      <star name="delta">
+        <ra>22.4878194444444</ra><d>-43.4955555555556</d>
+      </star>
+      <star name="mu">
+        <ra>22.2602444444444</ra><d>-41.34675</d>
+      </star>
+      <star name="gamma">
+        <ra>21.8987916666667</ra><d>-37.3648333333333</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="alnair" to="beta"/>
+      <line from="alnair" to="delta"/>
+      <line from="beta" to="delta"/>
+      <line from="beta" to="epsilon"/>
+      <line from="epsilon" to="zeta"/>
+      <line from="delta" to="mu"/>
+      <line from="mu" to="gamma"/>
+    </lines>
+  </constellation>
+  <constellation name="Pegasus">
+    <stars>
+      <star name="alpheratz">
+        <ra>0.139794055555556</ra><d>29.0904319444444</d>
+      </star>
+      <star name="beta">
+        <ra>23.0628694444444</ra><d>28.0824444444444</d>
+      </star>
+      <star name="gamma">
+        <ra>0.220597222222222</ra><d>15.1836111111111</d>
+      </star>
+      <star name="markab">
+        <ra>23.0793388888889</ra><d>15.2053611111111</d>
+      </star>
+      <star name="theta">
+        <ra>22.16995</ra><d>6.19777777777778</d>
+      </star>
+      <star name="enif">
+        <ra>21.7364277777778</ra><d>9.875</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="alpheratz" to="beta"/>
+      <line from="alpheratz" to="gamma"/>
+      <line from="beta" to="markab"/>
+      <line from="gamma" to="markab"/>
+      <line from="markab" to="theta"/>
+      <line from="theta" to="enif"/>
+    </lines>
+  </constellation>
+  <constellation name="Puppis">
+    <stars>
+      <star name="canopus">
+        <ra>6.39919166666667</ra><d>-52.6957222222222</d>
+      </star>
+      <star name="nu">
+        <ra>6.62935277777778</ra><d>-43.1959166666667</d>
+      </star>
+      <star name="pi">
+        <ra>7.28571111111111</ra><d>-37.0975</d>
+      </star>
+      <star name="xi">
+        <ra>7.82157222222222</ra><d>-24.8597777777778</d>
+      </star>
+      <star name="rho">
+        <ra>8.12575</ra><d>-24.3044444444444</d>
+      </star>
+      <star name="zeta">
+        <ra>8.05974166666667</ra><d>-40.0031944444445</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="canopus" to="nu"/>
+      <line from="nu" to="pi"/>
+      <line from="pi" to="xi"/>
+      <line from="xi" to="rho"/>
+      <line from="rho" to="zeta"/>
+    </lines>
+  </constellation>
+  <constellation name="Cetus">
+    <stars>
+      <star name="menkar">
+        <ra>3.03799444444444</ra><d>4.08991666666667</d>
+      </star>
+      <star name="lambda">
+        <ra>2.99525</ra><d>8.90738888888889</d>
+      </star>
+      <star name="mu">
+        <ra>2.74899166666667</ra><d>10.1142222222222</d>
+      </star>
+      <star name="xi">
+        <ra>2.21666944444444</ra><d>8.84675</d>
+      </star>
+      <star name="gamma">
+        <ra>2.7217</ra><d>3.23616666666667</d>
+      </star>
+      <star name="delta">
+        <ra>2.65804166666667</ra><d>0.32852777777778</d>
+      </star>
+      <star name="mira">
+        <ra>2.32244166666667</ra><d>-2.97705555555556</d>
+      </star>
+      <star name="zeta">
+        <ra>1.85766944444444</ra><d>-10.3349444444444</d>
+      </star>
+      <star name="theta">
+        <ra>1.40040277777778</ra><d>-8.18275</d>
+      </star>
+      <star name="eta">
+        <ra>1.14312777777778</ra><d>-10.1819166666667</d>
+      </star>
+      <star name="iota">
+        <ra>0.3238</ra><d>-8.82383333333333</d>
+      </star>
+      <star name="diphda">
+        <ra>0.726452777777778</ra><d>-17.9866944444444</d>
+      </star>
+      <star name="tau">
+        <ra>1.73475833333333</ra><d>-15.9395555555556</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="menkar" to="lambda"/>
+      <line from="lambda" to="mu"/>
+      <line from="mu" to="xi"/>
+      <line from="xi" to="gamma"/>
+      <line from="gamma" to="menkar"/>
+      <line from="gamma" to="delta"/>
+      <line from="delta" to="mira"/>
+      <line from="mira" to="zeta"/>
+      <line from="zeta" to="theta"/>
+      <line from="theta" to="eta"/>
+      <line from="eta" to="iota"/>
+      <line from="iota" to="diphda"/>
+      <line from="diphda" to="tau"/>
+      <line from="tau" to="zeta"/>
+    </lines>
+  </constellation>
+  <constellation name="Draco">
+    <stars>
+      <star name="thuban">
+        <ra>14.073175</ra><d>64.3758055555555</d>
+      </star>
+      <star name="lambda">
+        <ra>11.5234138888889</ra><d>69.3311111111111</d>
+      </star>
+      <star name="kappa">
+        <ra>12.5580666666667</ra><d>69.7882222222222</d>
+      </star>
+      <star name="edasich">
+        <ra>15.4154944444444</ra><d>58.9660277777778</d>
+      </star>
+      <star name="theta">
+        <ra>16.0315833333333</ra><d>58.5644444444444</d>
+      </star>
+      <star name="zeta">
+        <ra>17.1464527777778</ra><d>65.7146388888889</d>
+      </star>
+      <star name="chi">
+        <ra>18.35065</ra><d>72.7336944444444</d>
+      </star>
+      <star name="delta">
+        <ra>19.2092083333333</ra><d>67.6613055555556</d>
+      </star>
+      <star name="epsilon">
+        <ra>19.8028361111111</ra><d>70.2678333333333</d>
+      </star>
+      <star name="xi">
+        <ra>17.8921194444444</ra><d>56.8724444444444</d>
+      </star>
+      <star name="nu">
+        <ra>17.5377444444444</ra><d>55.1728055555556</d>
+      </star>
+      <star name="beta">
+        <ra>17.5072166666667</ra><d>52.3013611111111</d>
+      </star>
+      <star name="eltanin">
+        <ra>17.9434388888889</ra><d>51.4889444444444</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="lambda" to="kappa"/>
+      <line from="kappa" to="thuban"/>
+      <line from="thuban" to="edasich"/>
+      <line from="edasich" to="theta"/>
+      <line from="theta" to="zeta"/>
+      <line from="zeta" to="chi"/>
+      <line from="chi" to="delta"/>
+      <line from="delta" to="epsilon"/>
+      <line from="delta" to="xi"/>
+      <line from="xi" to="nu"/>
+      <line from="nu" to="beta"/>
+      <line from="beta" to="eltanin"/>
+      <line from="eltanin" to="xi"/>
+    </lines>
+  </constellation>
+  <constellation name="Perseus">
+    <stars>
+      <star name="mirfak">
+        <ra>3.405375</ra><d>49.86125</d>
+      </star>
+      <star name="gamma">
+        <ra>3.07994166666667</ra><d>53.5064444444445</d>
+      </star>
+      <star name="algol">
+        <ra>3.13614722222222</ra><d>40.9556388888889</d>
+      </star>
+      <star name="delta">
+        <ra>3.71541111111111</ra><d>47.7876666666667</d>
+      </star>
+      <star name="epsilon">
+        <ra>3.96422777777778</ra><d>40.0102777777778</d>
+      </star>
+      <star name="zeta">
+        <ra>3.9022</ra><d>31.8836666666667</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="gamma" to="mirfak"/>
+      <line from="mirfak" to="algol"/>
+      <line from="mirfak" to="delta"/>
+      <line from="delta" to="epsilon"/>
+      <line from="epsilon" to="zeta"/>
+    </lines>
+  </constellation>
+  <constellation name="Ophiuchus">
+    <stars>
+      <star name="raslahague">
+        <ra>17.5822222222222</ra><d>12.5605833333333</d>
+      </star>
+      <star name="kappa">
+        <ra>16.9611861111111</ra><d>9.37505555555556</d>
+      </star>
+      <star name="delta">
+        <ra>16.2391027777778</ra><d>-3.69397222222222</d>
+      </star>
+      <star name="zeta">
+        <ra>16.6193138888889</ra><d>-10.5671388888889</d>
+      </star>
+      <star name="beta">
+        <ra>17.72455</ra><d>4.56691666666667</d>
+      </star>
+      <star name="sabik">
+        <ra>17.1729611111111</ra><d>-15.7251388888889</d>
+      </star>
+      <star name="nu">
+        <ra>17.9837777777778</ra><d>-9.77336111111111</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="raslahague" to="kappa"/>
+      <line from="kappa" to="delta"/>
+      <line from="kappa" to="zeta"/>
+      <line from="delta" to="zeta"/>
+      <line from="raslahague" to="beta"/>
+      <line from="beta" to="sabik"/>
+      <line from="beta" to="nu"/>
+      <line from="nu" to="sabik"/>
+      <line from="sabik" to="zeta"/>
+    </lines>
+  </constellation>
+  <constellation name="Corvus">
+    <stars>
+      <star name="gienah">
+        <ra>12.2634638888889</ra><d>-17.5419722222222</d>
+      </star>
+      <star name="delta">
+        <ra>12.4977722222222</ra><d>-16.5150833333333</d>
+      </star>
+      <star name="beta">
+        <ra>12.5731194444444</ra><d>-23.3966111111111</d>
+      </star>
+      <star name="epsilon">
+        <ra>12.1687583333333</ra><d>-22.6198055555556</d>
+      </star>
+      <star name="alpha">
+        <ra>12.1402083333333</ra><d>-24.7287777777778</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="gienah" to="epsilon"/>
+      <line from="epsilon" to="alpha"/>
+      <line from="epsilon" to="beta"/>
+      <line from="beta" to="delta"/>
+      <line from="delta" to="gienah"/>
+    </lines>
+  </constellation>
+  <constellation name="Pavo">
+    <stars>
+      <star name="peacock">
+        <ra>20.4274583333333</ra><d>-56.7348888888889</d>
+      </star>
+      <star name="gamma">
+        <ra>21.4406916666667</ra><d>-65.3681388888889</d>
+      </star>
+      <star name="delta">
+        <ra>20.1449611111111</ra><d>-66.1793333333333</d>
+      </star>
+      <star name="epsilon">
+        <ra>20.0098305555556</ra><d>-72.9101944444445</d>
+      </star>
+      <star name="zeta">
+        <ra>18.7172583333333</ra><d>-71.4277222222222</d>
+      </star>
+      <star name="lambda">
+        <ra>18.8702888888889</ra><d>-62.1875555555556</d>
+      </star>
+      <star name="kappa">
+        <ra>18.9491777777778</ra><d>-67.2335277777778</d>
+      </star>
+      <star name="xi">
+        <ra>18.3871166666667</ra><d>-61.4939166666667</d>
+      </star>
+      <star name="pi">
+        <ra>18.1429972222222</ra><d>-63.6680555555556</d>
+      </star>
+      <star name="eta">
+        <ra>17.7622222222222</ra><d>-64.7237222222222</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="peacock" to="gamma"/>
+      <line from="peacock" to="delta"/>
+      <line from="gamma" to="delta"/>
+      <line from="delta" to="epsilon"/>
+      <line from="delta" to="zeta"/>
+      <line from="delta" to="kappa"/>
+      <line from="delta" to="lambda"/>
+      <line from="lambda" to="xi"/>
+      <line from="xi" to="pi"/>
+      <line from="kappa" to="pi"/>
+      <line from="pi" to="eta"/>
+    </lines>
+  </constellation>
+  <constellation name="Phoenix">
+    <stars>
+      <star name="ankaa">
+        <ra>0.438019444444444</ra><d>-42.3051111111111</d>
+      </star>
+      <star name="epsilon">
+        <ra>0.156816666666667</ra><d>-45.747</d>
+      </star>
+      <star name="beta">
+        <ra>1.10141944444444</ra><d>-46.7185</d>
+      </star>
+      <star name="gamma">
+        <ra>1.47276111111111</ra><d>-43.3177222222222</d>
+      </star>
+      <star name="delta">
+        <ra>1.52082777777778</ra><d>-49.0730833333333</d>
+      </star>
+      <star name="zeta">
+        <ra>1.13973888888889</ra><d>-55.2458333333333</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="ankaa" to="epsilon"/>
+      <line from="epsilon" to="beta"/>
+      <line from="ankaa" to="beta"/>
+      <line from="beta" to="gamma"/>
+      <line from="gamma" to="delta"/>
+      <line from="delta" to="zeta"/>
+      <line from="zeta" to="beta"/>
+    </lines>
+  </constellation>
+  <constellation name="Eridanus">
+    <stars>
+      <star name="beta">
+        <ra>5.13084166666667</ra><d>-5.08625</d>
+      </star>
+      <star name="mu">
+        <ra>4.75837222222222</ra><d>-3.25461111111111</d>
+      </star>
+      <star name="nu">
+        <ra>4.60531666666667</ra><d>-3.35244444444444</d>
+      </star>
+      <star name="omicron1">
+        <ra>4.19775833333333</ra><d>-6.83777777777778</d>
+      </star>
+      <star name="gamma">
+        <ra>3.96714722222222</ra><d>-13.50825</d>
+      </star>
+      <star name="pi">
+        <ra>3.76902777777778</ra><d>-12.1017222222222</d>
+      </star>
+      <star name="delta">
+        <ra>3.72082222222222</ra><d>-9.76519444444445</d>
+      </star>
+      <star name="epsilon">
+        <ra>3.54900555555556</ra><d>-9.45830555555555</d>
+      </star>
+      <star name="zeta">
+        <ra>3.26389722222222</ra><d>-8.81983333333333</d>
+      </star>
+      <star name="eta">
+        <ra>2.94044444444444</ra><d>-8.89761111111111</d>
+      </star>
+      <star name="tau1">
+        <ra>2.75166111111111</ra><d>-18.5726388888889</d>
+      </star>
+      <star name="tau3">
+        <ra>3.03988611111111</ra><d>-23.6243333333333</d>
+      </star>
+      <star name="tau4">
+        <ra>3.32526944444444</ra><d>-21.7579444444444</d>
+      </star>
+      <star name="tau5">
+        <ra>3.563125</ra><d>-21.6328055555556</d>
+      </star>
+      <star name="tau6">
+        <ra>3.78083055555556</ra><d>-23.2484444444444</d>
+      </star>
+      <star name="tau8">
+        <ra>3.89518888888889</ra><d>-24.6122222222222</d>
+      </star>
+      <star name="tau9">
+        <ra>3.99874444444444</ra><d>-24.01625</d>
+      </star>
+      <star name="upsilon1">
+        <ra>4.55850833333333</ra><d>-29.7658333333333</d>
+      </star>
+      <star name="upsilon2">
+        <ra>4.59251944444444</ra><d>-30.5623055555556</d>
+      </star>
+      <star name="acamar">
+        <ra>2.97103333333333</ra><d>-40.3047222222222</d>
+      </star>
+      <star name="iota">
+        <ra>2.67775833333333</ra><d>-39.8553055555556</d>
+      </star>
+      <star name="kappa">
+        <ra>2.44975</ra><d>-47.7038333333333</d>
+      </star>
+      <star name="chi">
+        <ra>1.93245277777778</ra><d>-51.6095833333333</d>
+      </star>
+      <star name="achenar">
+        <ra>1.62854166666667</ra><d>-57.2366666666667</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="beta" to="mu"/>
+      <line from="mu" to="nu"/>
+      <line from="nu" to="omicron1"/>
+      <line from="omicron1" to="gamma"/>
+      <line from="gamma" to="pi"/>
+      <line from="pi" to="delta"/>
+      <line from="delta" to="epsilon"/>
+      <line from="epsilon" to="zeta"/>
+      <line from="zeta" to="eta"/>
+      <line from="eta" to="tau1"/>
+      <line from="tau1" to="tau3"/>
+      <line from="tau3" to="tau4"/>
+      <line from="tau4" to="tau5"/>
+      <line from="tau5" to="tau6"/>
+      <line from="tau6" to="tau8"/>
+      <line from="tau8" to="tau9"/>
+      <line from="tau9" to="upsilon1"/>
+      <line from="upsilon1" to="upsilon2"/>
+      <line from="upsilon2" to="acamar"/>
+      <line from="acamar" to="iota"/>
+      <line from="iota" to="kappa"/>
+      <line from="kappa" to="chi"/>
+      <line from="chi" to="achenar"/>
+    </lines>
+  </constellation>
+  <constellation name="Triangulum Australe">
+    <stars>
+      <star name="atria">
+        <ra>16.811075</ra><d>-69.0276388888889</d>
+      </star>
+      <star name="beta">
+        <ra>15.9191138888889</ra><d>-63.42975</d>
+      </star>
+      <star name="gamma">
+        <ra>15.3151916666667</ra><d>-68.6794722222222</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="atria" to="beta"/>
+      <line from="beta" to="gamma"/>
+      <line from="gamma" to="atria"/>
+    </lines>
+  </constellation>
+  <constellation name="Hydra">
+    <stars>
+      <star name="pi">
+        <ra>14.1061861111111</ra><d>-26.6820277777778</d>
+      </star>
+      <star name="gamma">
+        <ra>13.3153472222222</ra><d>-23.1714166666667</d>
+      </star>
+      <star name="beta">
+        <ra>11.8818222222222</ra><d>-33.9081388888889</d>
+      </star>
+      <star name="xi">
+        <ra>11.5500722222222</ra><d>-31.8575277777778</d>
+      </star>
+      <star name="nu">
+        <ra>10.8270638888889</ra><d>-16.1941388888889</d>
+      </star>
+      <star name="mu">
+        <ra>10.4348638888889</ra><d>-16.8360833333333</d>
+      </star>
+      <star name="lambda">
+        <ra>10.1765</ra><d>-12.3538333333333</d>
+      </star>
+      <star name="upsilon">
+        <ra>9.85796666666667</ra><d>-14.8465555555556</d>
+      </star>
+      <star name="alphard">
+        <ra>9.45979166666667</ra><d>-8.65869444444444</d>
+      </star>
+      <star name="iota">
+        <ra>9.66425833333333</ra><d>-1.14266666666667</d>
+      </star>
+      <star name="zeta">
+        <ra>8.92324444444444</ra><d>5.94552777777778</d>
+      </star>
+      <star name="epsilon">
+        <ra>8.779625</ra><d>6.41891666666667</d>
+      </star>
+      <star name="delta">
+        <ra>8.62761388888889</ra><d>5.70380555555556</d>
+      </star>
+      <star name="sigma">
+        <ra>8.64595833333333</ra><d>3.34147222222222</d>
+      </star>
+      <star name="eta">
+        <ra>8.72041388888889</ra><d>3.39866666666667</d>
+      </star>
+      <star name="rho">
+        <ra>8.807055</ra><d>5.83788888888889</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="pi" to="gamma"/>
+      <line from="gamma" to="beta"/>
+      <line from="beta" to="xi"/>
+      <line from="xi" to="nu"/>
+      <line from="nu" to="mu"/>
+      <line from="mu" to="lambda"/>
+      <line from="lambda" to="upsilon"/>
+      <line from="upsilon" to="alphard"/>
+      <line from="alphard" to="iota"/>
+      <line from="iota" to="zeta"/>
+      <line from="zeta" to="epsilon"/>
+      <line from="epsilon" to="delta"/>
+      <line from="delta" to="sigma"/>
+      <line from="sigma" to="eta"/>
+      <line from="eta" to="rho"/>
+      <line from="rho" to="epsilon"/>
+    </lines>
+  </constellation>
+  <constellation name="Crux">
+    <stars>
+      <star name="acrux">
+        <ra>12.44330423</ra>
+        <d>-63.09905556</d>
+      </star>
+      <star name="beta">
+        <ra>12.7953244</ra>
+        <d>-59.68872222</d>
+      </star>
+      <star name="gamma">
+        <ra>12.51943323</ra>
+        <d>-57.11255556</d>
+      </star>
+      <star name="delta">
+        <ra>12.25242131</ra>
+        <d>-58.74888889</d>
+      </star>
+    </stars>
+    <lines>
+      <line from="acrux" to="gamma"/>
+      <line from="beta" to="delta"/>
+    </lines>
+  </constellation>
+</constellations>

@@ -1,0 +1,72 @@
+Sample 01
+From http://www.historicalatlas.com/lunars/easylun.html
+26-Apr-2004 (deltaT = 64.6)
+
+Sextant Index Correction -1.0'
+Moon UL:             45 46.8' at 20:09:51 UT
+Sun LL :             47 49.0' at 20:11:14 UT
+Moon Sun dist Near : 80 09.3' at 20:16:37 UT
+Moon UL:             47 13.8' at 20:17:57 UT
+
+Eye Height: 10 feet.
+
+Sample 02
+From Bruce Stark's tables
+Sextant Index Correction -0.2'
+8-Nov-96 14:47:14 UT (deltaT = 61.0)
+Eye Alt: 8 ft
+Venus, Moon LL
+Time 14:47:14 UT
+Venus Alt  : 27 52.5
+Moon LL Alt: 23 38.0
+Distance   : 4 19.1, Moon FL
+
+Sample 03
+Sextant Index Correction -0.2'
+31-Oct-96 17:18:52 UT (deltaT = 61.0)
+Eye Alt: 8 ft
+Sun LL, Moon LL
+Time 17:18:52 UT
+Sun LL Alt : 21 23.7
+Moon LL Alt: 20 02.8
+Distance NL: 118 29.7
+====================================================================
+====================================================================
+Moon with The Sun, 2004-4-26 20:16:37.0 (dt:64.6)
+-----------------------------------------
+Horizon dip:3.072699920265564'
+-----------------------------------------
+Moon Alt: 47°12.80'(47.21333333333333)
+The Sun Alt: 47°48.00'(47.8)
+sd Moon:14.904159909099263'
+Moon Correction:18.32365581426367'
+Moon Apparent Altitude: 46°54.82'
+Moon Observed Altitude: 47°31.12'
+-----------------------------------------
+sd The Sun:15.889648356503997'
+Body Correction:12.033632794983397'
+The Sun Apparent Altitude: 48°00.82'
+The Sun Observed Altitude: 48°00.03'
+-----------------------------------------
+Corrected Obs Dist (1): 80°39.62'
+hMoon   : 47°31.12'
+appHMoon: 46°54.82'
+hBody   : 48°00.03'
+appHBody: 48°00.82'
+Dist    : 80°39.62'
+Corrected Obs Dist (2): 80°06.70'
+----------------------
+Actual Dist           : 80°06.71'
+Lower for [The Sun] on 2004-4-26 20:0:0.0 (dt:64.6) 79°59.05'
+- Extrapolation -
+Delta (1 hour):27.670546809496273'
+Delta dist    :7.648225559160267'
+Distance shot at 20:16:37.0 UT...
+Interpoled time :20:16:35.051 UT
+----------------------
+Difference (interpolated): +00:00:01.949
+Difference (calculated)  : -00:00:01.693
+----------------------
+Done
+NB: 32s ~ 8'
+

@@ -11,6 +11,7 @@ import java.awt.Dimension;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
+import javax.swing.JScrollPane;
 import javax.swing.event.InternalFrameAdapter;
 import javax.swing.event.InternalFrameEvent;
 
@@ -18,6 +19,7 @@ public class RealTimeAlmanacInternalFrame
   extends JInternalFrame
 {
   private RealTimeAlmanacPanel srp = new RealTimeAlmanacPanel();
+  JScrollPane scrollPane = new JScrollPane(srp);
 
   public RealTimeAlmanacInternalFrame()
   {
@@ -35,7 +37,7 @@ public class RealTimeAlmanacInternalFrame
     throws Exception
   {
     this.getContentPane().setLayout(new BorderLayout());
-    this.getContentPane().add(srp, BorderLayout.CENTER);
+    this.getContentPane().add(scrollPane, BorderLayout.CENTER);
     this.setSize(new Dimension(300, 470));
     this.setTitle("Real Time Almanac");
 //  try { this.setFrameIcon(new ImageIcon(this.getClass().getResource("sextant.gif"))); } catch (Exception ignore) {}

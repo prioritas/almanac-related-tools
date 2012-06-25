@@ -5,11 +5,14 @@ import java.awt.Dimension;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.ScrollPaneConstants;
 
 public class RealTimeFrame
   extends JFrame
 {
   JPanel realTimePanel = new RealTimeAlmanacPanel();
+  JScrollPane scrollPane = new JScrollPane();
   
   public RealTimeFrame()
   {
@@ -29,6 +32,7 @@ public class RealTimeFrame
     this.getContentPane().setLayout( new BorderLayout() );
     this.setSize(new Dimension(300, 470));    
     this.setTitle( "Real Time Almanac" );
-    this.getContentPane().add(realTimePanel, BorderLayout.CENTER);
+    scrollPane.getViewport().add(realTimePanel, null);
+    this.getContentPane().add(scrollPane, BorderLayout.CENTER);
   }
 }

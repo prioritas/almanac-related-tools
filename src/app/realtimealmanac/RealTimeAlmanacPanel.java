@@ -180,7 +180,7 @@ public class RealTimeAlmanacPanel
       sru.setAHG(Context.GHAsun);
       sru.setD(Context.DECsun);    
       sru.calculate();  
-      str = "Sun Alt     :" + GeomUtil.decToSex(sru.getHe(), GeomUtil.SWING, GeomUtil.NONE) + " (" + sru.getHe() + ")";
+      str = "Sun Alt     :" + GeomUtil.decToSex(sru.getHe(), GeomUtil.SWING, GeomUtil.NONE); // + " (" + sru.getHe() + ")";
       gr.drawString(str, x, y);
       strWidth  = gr.getFontMetrics(gr.getFont()).stringWidth(str);
       maxWidth = Math.max(maxWidth, strWidth);
@@ -213,7 +213,7 @@ public class RealTimeAlmanacPanel
       sru.setAHG(Context.GHAmoon);
       sru.setD(Context.DECmoon);    
       sru.calculate();  
-      str = "Moon Alt    :" + GeomUtil.decToSex(sru.getHe(), GeomUtil.SWING, GeomUtil.NONE) + " (" + sru.getHe() + ")";
+      str = "Moon Alt    :" + GeomUtil.decToSex(sru.getHe(), GeomUtil.SWING, GeomUtil.NONE); // + " (" + sru.getHe() + ")";
       gr.drawString(str, x, y);
       strWidth  = gr.getFontMetrics(gr.getFont()).stringWidth(str);
       maxWidth = Math.max(maxWidth, strWidth);
@@ -242,7 +242,7 @@ public class RealTimeAlmanacPanel
       sru.setAHG(Context.GHAvenus);
       sru.setD(Context.DECvenus);    
       sru.calculate();  
-      str = "Venus Alt   :" + GeomUtil.decToSex(sru.getHe(), GeomUtil.SWING, GeomUtil.NONE) + " (" + sru.getHe() + ")";
+      str = "Venus Alt   :" + GeomUtil.decToSex(sru.getHe(), GeomUtil.SWING, GeomUtil.NONE); // + " (" + sru.getHe() + ")";
       gr.drawString(str, x, y);
       strWidth  = gr.getFontMetrics(gr.getFont()).stringWidth(str);
       maxWidth = Math.max(maxWidth, strWidth);
@@ -275,7 +275,7 @@ public class RealTimeAlmanacPanel
       sru.setAHG(Context.GHAmars);
       sru.setD(Context.DECmars);    
       sru.calculate();  
-      str = "Mars Alt    :" + GeomUtil.decToSex(sru.getHe(), GeomUtil.SWING, GeomUtil.NONE) + " (" + sru.getHe() + ")";
+      str = "Mars Alt    :" + GeomUtil.decToSex(sru.getHe(), GeomUtil.SWING, GeomUtil.NONE); // + " (" + sru.getHe() + ")";
       gr.drawString(str, x, y);
       strWidth  = gr.getFontMetrics(gr.getFont()).stringWidth(str);
       maxWidth = Math.max(maxWidth, strWidth);
@@ -308,7 +308,7 @@ public class RealTimeAlmanacPanel
       sru.setAHG(Context.GHAjupiter);
       sru.setD(Context.DECjupiter);    
       sru.calculate();  
-      str = "Jupiter Alt :" + GeomUtil.decToSex(sru.getHe(), GeomUtil.SWING, GeomUtil.NONE) + " (" + sru.getHe() + ")";
+      str = "Jupiter Alt :" + GeomUtil.decToSex(sru.getHe(), GeomUtil.SWING, GeomUtil.NONE); // + " (" + sru.getHe() + ")";
       strWidth  = gr.getFontMetrics(gr.getFont()).stringWidth(str);
       maxWidth = Math.max(maxWidth, strWidth);
       gr.drawString(str, x, y);
@@ -341,7 +341,7 @@ public class RealTimeAlmanacPanel
       sru.setAHG(Context.GHAsaturn);
       sru.setD(Context.DECsaturn);    
       sru.calculate();  
-      str = "Saturn Alt  :" + GeomUtil.decToSex(sru.getHe(), GeomUtil.SWING, GeomUtil.NONE) + " (" + sru.getHe() + ")";
+      str = "Saturn Alt  :" + GeomUtil.decToSex(sru.getHe(), GeomUtil.SWING, GeomUtil.NONE); // + " (" + sru.getHe() + ")";
       gr.drawString(str, x, y);
       strWidth  = gr.getFontMetrics(gr.getFont()).stringWidth(str);
       maxWidth = Math.max(maxWidth, strWidth);

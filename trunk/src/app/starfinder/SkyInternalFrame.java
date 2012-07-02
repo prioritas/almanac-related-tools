@@ -64,6 +64,7 @@ public class SkyInternalFrame
       PrintWriter pw = new PrintWriter(SkyPanel.POSITION_PROPRTIES_FILE_NAME);
       posProp.list(pw);
       pw.close();
+      sp.onExit();
     }
     catch (Exception ex)
     {

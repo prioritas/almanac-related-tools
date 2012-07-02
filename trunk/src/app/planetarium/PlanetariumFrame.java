@@ -24,7 +24,7 @@ public class PlanetariumFrame
     throws Exception
   {
     this.getContentPane().setLayout( new BorderLayout() );
-    this.setSize( new Dimension(400, 300) );
+    this.setSize(new Dimension(466, 498));
     this.setTitle( "Planetarium" );
     this.getContentPane().add(new PlanetariumPanel(), BorderLayout.CENTER);
   }

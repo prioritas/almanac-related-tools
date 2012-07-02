@@ -3,7 +3,6 @@ package app.starfinder;
 
 import app.starfinder.ctx.SFContext;
 import app.starfinder.ctx.StarFinderEventListener;
-import app.starfinder.util.HeadingPanel;
 
 import app.util.PositionPanel;
 
@@ -13,6 +12,12 @@ import calculation.SightReductionUtil;
 
 import chart.components.ui.ChartPanel;
 import chart.components.ui.ChartPanelParentInterface_II;
+
+import coreutilities.ctx.CoreContext;
+
+import coreutilities.ctx.CoreEventListener;
+
+import coreutilities.gui.HeadingPanel;
 
 import java.awt.AlphaComposite;
 import java.awt.BorderLayout;
@@ -186,6 +191,15 @@ public class SkyPanel
 
   private transient NMEAListener nmeaListener = null;
   
+  private transient CoreEventListener coreListener = new CoreEventListener()
+       {
+         @Override
+         public void headingHasChanged(int hdg) 
+         {
+           SFContext.getInstance().fireHeadingHasChanged(hdg);
+         }
+       };
+  
   public SkyPanel()
   {
     try { deltaT = Float.parseFloat(System.getProperty("deltaT", "65.5")); }
@@ -248,7 +262,9 @@ public class SkyPanel
     chartPanel = new ChartPanel(this);
     chartPanel.setEnforceTooltip(true);
     chartPanel.setMouseDraggedEnabled(true);
-    headingPanel = new HeadingPanel();
+    headingPanel = new HeadingPanel(true);
+    headingPanel.setDraggable(true);
+    CoreContext.getInstance().addApplicationListener(coreListener);
     jScrollPane.getViewport().add(chartPanel, null);
     
     chartPlusCompassPanel.add(jScrollPane, BorderLayout.CENTER);
@@ -627,6 +643,13 @@ public class SkyPanel
     positionPanel.setPosition(latitude, longitude);
     setCurrentTime();   
     chartPanel.repaint();
+  }
+  
+  public void onExit()
+  {
+//  System.out.println("Removing Listeners from Planetarium");
+    CoreContext.getInstance().removeApplicationListener(coreListener);
+    NMEAContext.getInstance().removeNMEAListener(nmeaListener);    
   }
   
   public void chartPanelPaintComponentBefore(Graphics graphics)

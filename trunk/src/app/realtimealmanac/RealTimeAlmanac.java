@@ -30,7 +30,8 @@ public class RealTimeAlmanac
   {
     try
     {
-      UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+      if (System.getProperty("swing.defaultlaf") == null)
+        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
     }
     catch (Exception e)
     {

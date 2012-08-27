@@ -273,9 +273,9 @@ public class PlanetariumPanel
     plotBody(gr, Context.DECjupiter, Context.GHAjupiter, "Jupiter");
     plotBody(gr, Context.DECsaturn, Context.GHAsaturn, "Saturn");
 
-    for (int i=0; i<Star.CATALOG.length; i++)
+    for (int i=0; i<Star.getCatalog().length; i++)
     {
-      String starName = Star.CATALOG[i].getStarName();
+      String starName = Star.getCatalog()[i].getStarName();
       Core.starPos(starName);
       plotBody(gr, Context.DECstar, Context.GHAstar, starName);
     }

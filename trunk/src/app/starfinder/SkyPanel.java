@@ -803,9 +803,9 @@ public class SkyPanel
     }
     if (displayStars)
     {
-      for (int i=0; i<Star.CATALOG.length; i++)
+      for (int i=0; i<Star.getCatalog().length; i++)
       {
-        String starName = Star.CATALOG[i].getStarName();
+        String starName = Star.getCatalog()[i].getStarName();
         Core.starPos(starName);
         dr.setAHG(Context.GHAstar);
         dr.setD(Context.DECstar);    

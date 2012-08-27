@@ -333,7 +333,7 @@ public class AlmanacComputer
   private static double[] prevDec = new double[7];
   
   private static double[] prevLunar = new double[7];
-  private static double[] prevStarLunars = new double[Star.CATALOG.length];
+  private static double[] prevStarLunars = new double[Star.getCatalog().length];
   
   private static double prevEOT = Double.MAX_VALUE;
   
@@ -355,8 +355,8 @@ public class AlmanacComputer
     double[] deltaD   = new double[] {0d, 0d, 0d, 0d, 0d, 0d, 0d};
     
     double[] deltaLunar = new double[] {0d, 0d, 0d, 0d, 0d, 0d};
-    double[] deltaStarLunar = new double[Star.CATALOG.length];
-    for (int i=0; i<Star.CATALOG.length; i++)
+    double[] deltaStarLunar = new double[Star.getCatalog().length];
+    for (int i=0; i<Star.getCatalog().length; i++)
       deltaStarLunar[i] = 0d;
 
     double deltaEOT = 0d;
@@ -622,10 +622,11 @@ public class AlmanacComputer
     //  out.println("RA: " + GeomUtil.formatInHours(Context.RApol));
     //  out.println("Dec:" + GeomUtil.decToSex(Context.DECpol, DEGREE_OPTION, GeomUtil.NS) + "\t(" + GeomUtil.formatDMS(Context.DECpol, "\370") + ")");
 
-    for (int i=0; i<Star.CATALOG.length; i++)
+    for (int i=0; i<Star.getCatalog().length; i++)
     {
-      out.println("<body name='" + escapeXML(Star.CATALOG[i].getStarName()) + "'");
-      Core.starPos(Star.CATALOG[i].getStarName());
+      out.println("<body name='" + escapeXML(Star.getCatalog()[i].getStarName()) + "'");
+      out.println("      loc='" + Star.getCatalog()[i].getConstellation() + "'"); // Like alpha Canis Majoris
+      Core.starPos(Star.getCatalog()[i].getStarName());
       if (prevStarLunars[i] != Double.MAX_VALUE)
         deltaStarLunar[i] = Math.abs(Context.starMoonDist - prevStarLunars[i]);
       out.println("      GHA='" + Context.GHAstar + "'");

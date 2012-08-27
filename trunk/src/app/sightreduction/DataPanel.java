@@ -104,8 +104,8 @@ public class DataPanel
     bodyComboBox.addItem("Mars");
     bodyComboBox.addItem("Jupiter");
     bodyComboBox.addItem("Saturn");
-    for (int i=0; i<Star.CATALOG.length; i++)
-      bodyComboBox.addItem(Star.CATALOG[i].getStarName());
+    for (int i=0; i<Star.getCatalog().length; i++)
+      bodyComboBox.addItem(Star.getCatalog()[i].getStarName());
     
     limbComboBox.removeAllItems();
     limbComboBox.addItem("Lower Limb");

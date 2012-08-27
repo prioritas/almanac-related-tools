@@ -76,8 +76,8 @@ public class OtherBodyPanel
     bodyComboBox.addItem("Jupiter");
     bodyComboBox.addItem("Saturn");
     // Stars
-    for (int i=0; i<Star.CATALOG.length; i++)
-      bodyComboBox.addItem(Star.CATALOG[i].getStarName());
+    for (int i=0; i<Star.getCatalog().length; i++)
+      bodyComboBox.addItem(Star.getCatalog()[i].getStarName());
     
     this.add(altitudeLabel, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0, GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
     this.add(degreeTextField, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));

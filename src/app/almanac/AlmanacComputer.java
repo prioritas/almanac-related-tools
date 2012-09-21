@@ -24,6 +24,19 @@ public class AlmanacComputer
   private static int year = 0, month = 0, day = 0, hour = 0, minute = 0;
   private static float second = 0f, deltaT = 0f;
 
+  public final static int JANUARY   =  1;
+  public final static int FEBRUARY  =  2;
+  public final static int MARCH     =  3;
+  public final static int APRIL     =  4;
+  public final static int MAY       =  5;
+  public final static int JUNE      =  6;
+  public final static int JULY      =  7;
+  public final static int AUGUST    =  8;
+  public final static int SEPTEMBER =  9;
+  public final static int OCTOBER   = 10;
+  public final static int NOVEMBER  = 11;
+  public final static int DECEMBER  = 12;  
+  
   private static void displayHelp()
   {
     System.out.println("-- Parameters --");
@@ -60,7 +73,7 @@ public class AlmanacComputer
    * An example of a main.
    * Generates the xml output for the requested period.
    */
-  public static void main(String[] args)
+  public static void main_1(String[] args)
   {
     String help = getPrm(args, "-help");
     if (help != null)
@@ -156,7 +169,7 @@ public class AlmanacComputer
       }
     }
     int startYear = 0;
-    int startMonth = 1, endMonth = 12;
+    int startMonth = JANUARY, endMonth = DECEMBER;
     int startDay = 1, endDay = 0;
 
     if ("continuous".equals(type))
@@ -234,10 +247,34 @@ public class AlmanacComputer
       else
       {
         year += 1;
-        startMonth = 1;
+        startMonth = JANUARY;
       }
     }
     out.println("</almanac>");
+  }
+  
+  public static void main(String[] args)
+  {
+    year = 2012;
+    month = SEPTEMBER;
+    day = 21;
+    hour = 24;
+    deltaT = 66.7708f;
+    
+    AlmanacComputer.calculate();
+
+    System.out.println("-- 2012-09-21 24:00:00 --");    
+    System.out.println("GHA Sun: " + Context.GHAsun);
+    System.out.println("D Sun: " + Context.DECsun);
+
+    day = 22;
+    hour = 00;
+    
+    AlmanacComputer.calculate();
+    
+    System.out.println("-- 2012-09-22 00:00:00 --");    
+    System.out.println("GHA Sun: " + Context.GHAsun);
+    System.out.println("D Sun: " + Context.DECsun);
   }
 
   private static final String getPrm(String[] args, String prm)
@@ -329,10 +366,12 @@ public class AlmanacComputer
   private final static int SATURN  = 5;
   private final static int ARIES   = 6;
   
-  private static double[] prevGHA = new double[7];
-  private static double[] prevDec = new double[7];
+  private final static int NB_BODIES = 7;
   
-  private static double[] prevLunar = new double[7];
+  private static double[] prevGHA = new double[NB_BODIES];
+  private static double[] prevDec = new double[NB_BODIES];
+  
+  private static double[] prevLunar = new double[NB_BODIES];
   private static double[] prevStarLunars = new double[Star.getCatalog().length];
   
   private static double prevEOT = Double.MAX_VALUE;
@@ -341,8 +380,8 @@ public class AlmanacComputer
   {
     for (int i=0; i<prevGHA.length; i++)
     {
-      prevGHA[i] = Double.MAX_VALUE;
-      prevDec[i] = Double.MAX_VALUE;
+      prevGHA[i]   = Double.MAX_VALUE;
+      prevDec[i]   = Double.MAX_VALUE;
       prevLunar[i] = Double.MAX_VALUE;
     }
     for (int i=0; i<prevStarLunars.length; i++)

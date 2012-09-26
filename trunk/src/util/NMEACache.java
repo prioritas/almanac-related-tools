@@ -4,6 +4,8 @@ package util;
 import java.util.Date;
 import java.util.HashMap;
 
+import java.util.Map;
+
 import ocss.nmea.parser.GeoPos;
 import ocss.nmea.parser.OverGround;
 import ocss.nmea.parser.RMC;
@@ -15,7 +17,7 @@ import ocss.nmea.parser.Wind;
 
 public class NMEACache
 {
-  private HashMap<Integer, SVData> satellites = null;
+  private Map<Integer, SVData> satellites = null;
   private Date gpsDate = null;
   private double bsp = 0d;
   private double cog = 0d;
@@ -97,7 +99,7 @@ public class NMEACache
       }
       else if (k.equals("GSV"))
       {
-        HashMap<Integer, SVData> map = StringParsers.parseGSV(nmeaPayload);
+        Map<Integer, SVData> map = StringParsers.parseGSV(nmeaPayload);
         satellites = map;
 //      System.out.println(Integer.toString(map.size()) + " satellite(s) in view.");
       }
@@ -211,7 +213,7 @@ public class NMEACache
     this.satellites = satellites;
   }
 
-  public HashMap<Integer, SVData> getSatellites()
+  public Map<Integer, SVData> getSatellites()
   {
     return satellites;
   }

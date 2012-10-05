@@ -25,6 +25,8 @@ import javax.swing.SwingConstants;
 
 import app.almanac.AlmanacComputer;
 
+import javax.swing.text.NumberFormatter;
+
 import nauticalalmanac.Context;
 import nauticalalmanac.Core;
 
@@ -53,7 +55,8 @@ public class ClearLunarPanel
     try
     {
       jbInit();
-      datePanel.setDeltaT(65.984);
+      double deltaT = Double.parseDouble(System.getProperty("deltaT", "65.984"));
+      datePanel.setDeltaT(deltaT);
       Date d = TimeUtil.getGMT();
       datePanel.setDate(d);
     }

@@ -23,6 +23,8 @@ import javax.swing.JPanel;
 
 import javax.swing.JTextField;
 
+import javax.swing.text.NumberFormatter;
+
 import nauticalalmanac.Star;
 
 import util.SwingUtil;
@@ -30,11 +32,13 @@ import util.SwingUtil;
 public class DataPanel
   extends JPanel
 {
+  private final static DecimalFormat DF22 = new DecimalFormat("00.00"); 
+
   private GridBagLayout gridBagLayout1 = new GridBagLayout();
   private JLabel sextantAltitudeLabel = new JLabel();
   private JFormattedTextField degreeFormattedTextField = new JFormattedTextField(new DecimalFormat("00"));
   private JLabel degreeLabel = new JLabel();
-  private DecimalFormat df22 = new DecimalFormat("00.00");
+  private DecimalFormat df22 = DF22;
   private JFormattedTextField minuteFormattedTextField = new JFormattedTextField(df22);
   private JLabel minuteLabel = new JLabel();
   private JLabel bodyLabel = new JLabel();
@@ -74,7 +78,7 @@ public class DataPanel
     degreeLabel.setText(" ° ");
     minuteFormattedTextField.setPreferredSize(new Dimension(50, 20));
     minuteFormattedTextField.setHorizontalAlignment(JTextField.CENTER);
-    minuteFormattedTextField.setText("00.00");
+    minuteFormattedTextField.setText(((NumberFormatter)minuteFormattedTextField.getFormatter()).getFormat().format(0.0));
     minuteFormattedTextField.addFocusListener(new FocusAdapter()
       {
         public void focusGained(FocusEvent e)
@@ -118,8 +122,8 @@ public class DataPanel
     double d = 0;
     try
     {
-      double deg = Double.parseDouble(degreeFormattedTextField.getText());
-      double min = Double.parseDouble(minuteFormattedTextField.getText());
+      double deg = ((DecimalFormat)((NumberFormatter)degreeFormattedTextField.getFormatter()).getFormat()).parse(degreeFormattedTextField.getText()).doubleValue(); // Double.parseDouble(degreeFormattedTextField.getText());
+      double min = ((DecimalFormat)((NumberFormatter)minuteFormattedTextField.getFormatter()).getFormat()).parse(minuteFormattedTextField.getText()).doubleValue(); // Double.parseDouble(minuteFormattedTextField.getText());
       d = deg + (min / 60d);
     }
     catch (Exception ex)

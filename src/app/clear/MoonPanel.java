@@ -14,15 +14,18 @@ import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.text.NumberFormatter;
 
 public class MoonPanel
   extends JPanel
 {
+  private final static DecimalFormat DF22 = new DecimalFormat("00.00"); 
+
   private GridBagLayout gridBagLayout1 = new GridBagLayout();
   private JLabel altitudeLabel = new JLabel();
   private JFormattedTextField degreeTextField = new JFormattedTextField(new DecimalFormat("00"));
   private JLabel degreeSymbol = new JLabel();
-  private JFormattedTextField minuteTextField = new JFormattedTextField(new DecimalFormat("00.00"));
+  private JFormattedTextField minuteTextField = new JFormattedTextField(DF22);
   private JLabel minuteSymbol = new JLabel();
   private JLabel limbLabel = new JLabel();
   private JComboBox limbComboBox = new JComboBox();
@@ -56,7 +59,7 @@ public class MoonPanel
     degreeSymbol.setText("°");
     minuteTextField.setPreferredSize(new Dimension(40, 20));
     minuteTextField.setHorizontalAlignment(JTextField.CENTER);
-    minuteTextField.setText("0.0");
+    minuteTextField.setText(((NumberFormatter)minuteTextField.getFormatter()).getFormat().format(0.0));
     minuteSymbol.setText("'");
     limbLabel.setText("Limb:");
     limbComboBox.removeAllItems();
@@ -79,8 +82,9 @@ public class MoonPanel
     double a = 0d;
     try
     {
-      double d = Double.parseDouble(degreeTextField.getText());
-      double m = Double.parseDouble(minuteTextField.getText());
+//    System.out.println("formatter is a " + minuteTextField.getFormatter().getClass().getName() );
+      double d = DF22.parse(degreeTextField.getText()).doubleValue(); // Double.parseDouble(degreeTextField.getText());
+      double m = DF22.parse(minuteTextField.getText()).doubleValue(); // Double.parseDouble(minuteTextField.getText());
       a = d + (m / 60d);
     }
     catch (Exception ex)

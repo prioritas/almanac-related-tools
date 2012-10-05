@@ -42,6 +42,8 @@ public class DateTimePanel
       new MonthObject(11, "Nov"),
       new MonthObject(12, "Dec")
     };
+
+  private final static DecimalFormat DF23 = new DecimalFormat("00.000"); 
   
   private GridBagLayout gridBagLayout = new GridBagLayout();
   private JLabel yearLabel = new JLabel();
@@ -57,7 +59,7 @@ public class DateTimePanel
   private JLabel sepTwoLabel = new JLabel();
   private JFormattedTextField secondTextField = new JFormattedTextField(new DecimalFormat("00"));
   private JLabel deltaTLabel = new JLabel();
-  private JFormattedTextField deltaTTextField = new JFormattedTextField(new DecimalFormat("00.000"));
+  private JFormattedTextField deltaTTextField = new JFormattedTextField(DF23);
 
   public DateTimePanel()
   {
@@ -143,7 +145,10 @@ public class DateTimePanel
     deltaTLabel.setText("DeltaT:");
     deltaTTextField.setPreferredSize(new Dimension(50, 20));
     deltaTTextField.setHorizontalAlignment(JTextField.CENTER);
-    deltaTTextField.setText(System.getProperty("deltaT", "65.584"));
+    
+//  deltaTTextField.setText(System.getProperty("deltaT", "65.584"));
+    double deltaT = Double.parseDouble(System.getProperty("deltaT", "65.984"));
+    deltaTTextField.setText(((NumberFormatter)deltaTTextField.getFormatter()).getFormat().format(deltaT));
     deltaTTextField.addFocusListener(new FocusAdapter()
       {
         public void focusGained(FocusEvent e)
@@ -211,7 +216,7 @@ public class DateTimePanel
     double d = 0d;
     try
     {
-      d = Double.parseDouble(deltaTTextField.getText());
+      d = DF23.parse(deltaTTextField.getText()).doubleValue(); // Double.parseDouble(deltaTTextField.getText());
     }
     catch (Exception ex)
     {

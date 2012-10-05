@@ -21,14 +21,18 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
+import javax.swing.text.NumberFormatter;
+
 import util.SwingUtil;
 
 public class EyeHeightPanel
   extends JPanel
 {
+  private final static DecimalFormat DF22 = new DecimalFormat("00.00"); 
+
   private GridBagLayout gridBagLayout1 = new GridBagLayout();
   private JLabel eyeHeightLabel = new JLabel();
-  private JFormattedTextField eyeHeightTextField = new JFormattedTextField(new DecimalFormat("00.00"));
+  private JFormattedTextField eyeHeightTextField = new JFormattedTextField(DF22);
   private JRadioButton metersRadioButton = new JRadioButton();
   private JRadioButton feetRadioButton = new JRadioButton();
   private ButtonGroup group = new ButtonGroup();
@@ -51,7 +55,7 @@ public class EyeHeightPanel
     this.setLayout(gridBagLayout1);
     eyeHeightLabel.setText("Eye Height:");
     eyeHeightTextField.setPreferredSize(new Dimension(40, 20));
-    eyeHeightTextField.setText("01.80");
+    eyeHeightTextField.setText(((NumberFormatter)eyeHeightTextField.getFormatter()).getFormat().format(01.80));
     eyeHeightTextField.setHorizontalAlignment(JTextField.CENTER);
     eyeHeightTextField.addFocusListener(new FocusAdapter()
       {
@@ -76,7 +80,7 @@ public class EyeHeightPanel
     double h = 0d;
     try
     {
-      h = Double.parseDouble(eyeHeightTextField.getText());
+      h = DF22.parse(eyeHeightTextField.getText()).doubleValue(); // Double.parseDouble(eyeHeightTextField.getText());
     }
     catch (Exception ex)
     {

@@ -1,5 +1,8 @@
 package app.util;
 
+
+import app.starfinder.ctx.SFContext;
+
 import astro.calc.GeoPoint;
 
 import java.awt.Dimension;
@@ -7,12 +10,9 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import java.awt.event.FocusAdapter;
-
 import java.awt.event.FocusEvent;
 
 import java.text.DecimalFormat;
@@ -20,30 +20,30 @@ import java.text.DecimalFormat;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
-import app.starfinder.ctx.SFContext;
-
-import javax.swing.JFormattedTextField;
-
-import user.util.GeomUtil;
+import javax.swing.text.NumberFormatter;
 
 import util.SwingUtil;
 
+
 public class PositionPanel extends JPanel 
 {
+  @SuppressWarnings("compatibility:3582636225952168128")
+  public final static long serialVersionUID = 1L;
+  
   private GridBagLayout gridBagLayout1 = new GridBagLayout();
   private JLabel jLabel2 = new JLabel();
   private JLabel jLabel3 = new JLabel();
-  private JTextField LDeg = new JFormattedTextField(new DecimalFormat("00"));
+  private JFormattedTextField LDeg = new JFormattedTextField(new DecimalFormat("00"));
   private JLabel jLabel4 = new JLabel();
-  private JTextField LMin = new JFormattedTextField(new DecimalFormat("00.00"));
+  private JFormattedTextField LMin = new JFormattedTextField(new DecimalFormat("00.00"));
   private JComboBox LSign = new JComboBox();
   private JComboBox GSign = new JComboBox();
-  private JTextField GMin = new JFormattedTextField(new DecimalFormat("00.00"));
-  private JTextField GDeg = new JFormattedTextField(new DecimalFormat("000"));
+  private JFormattedTextField GMin = new JFormattedTextField(new DecimalFormat("00.00"));
+  private JFormattedTextField GDeg = new JFormattedTextField(new DecimalFormat("000"));
   private JLabel jLabel5 = new JLabel();
   private JButton updatePositionButton = new JButton();
   
@@ -106,7 +106,7 @@ public class PositionPanel extends JPanel
       });
     jLabel4.setText("°");
     jLabel4.setFont(font);
-    LMin.setText("00.00");
+    LMin.setText(((NumberFormatter)LMin.getFormatter()).getFormat().format(0.0));
     LMin.setHorizontalAlignment(JTextField.RIGHT);
     LMin.setPreferredSize(new Dimension(50, 20));
     LMin.setMinimumSize(new Dimension(50, 20));
@@ -128,7 +128,7 @@ public class PositionPanel extends JPanel
     GSign.setFont(font);
     GSign.addItem("E");
     GSign.addItem("W");
-    GMin.setText("00.00");
+    GMin.setText(((NumberFormatter)GMin.getFormatter()).getFormat().format(0.0));
     GMin.setHorizontalAlignment(JTextField.RIGHT);
     GMin.setPreferredSize(new Dimension(50, 20));
     GMin.setMinimumSize(new Dimension(50, 20));
@@ -181,9 +181,21 @@ public class PositionPanel extends JPanel
   public double getL()
   {
     double l = 0.0;
-    String d = LDeg.getText();
-    String m = LMin.getText();
-    l = GeomUtil.sexToDec(d, m);
+//  String d = LDeg.getText();
+//  String m = LMin.getText();
+//  l = GeomUtil.sexToDec(d, m);
+
+    try
+    {
+      double deg = ((DecimalFormat)((NumberFormatter)LDeg.getFormatter()).getFormat()).parse(LDeg.getText()).doubleValue(); // Double.parseDouble(degreeFormattedTextField.getText());
+      double min = ((DecimalFormat)((NumberFormatter)LMin.getFormatter()).getFormat()).parse(LMin.getText()).doubleValue(); // Double.parseDouble(minuteFormattedTextField.getText());
+      l = deg + (min / 60d);
+    }
+    catch (Exception ex)
+    {
+      ex.printStackTrace();
+    }
+
     String ns = (String)LSign.getSelectedItem();
     if (ns.toUpperCase().equals("S"))
       l *= -1;
@@ -193,9 +205,21 @@ public class PositionPanel extends JPanel
   public double getG()
   {
     double g = 0.0;
-    String d = GDeg.getText();
-    String m = GMin.getText();
-    g = GeomUtil.sexToDec(d, m);
+//  String d = GDeg.getText();
+//  String m = GMin.getText();
+//  g = GeomUtil.sexToDec(d, m);
+
+    try
+    {
+      double deg = ((DecimalFormat)((NumberFormatter)GDeg.getFormatter()).getFormat()).parse(GDeg.getText()).doubleValue(); // Double.parseDouble(degreeFormattedTextField.getText());
+      double min = ((DecimalFormat)((NumberFormatter)GMin.getFormatter()).getFormat()).parse(GMin.getText()).doubleValue(); // Double.parseDouble(minuteFormattedTextField.getText());
+      g = deg + (min / 60d);
+    }
+    catch (Exception ex)
+    {
+      ex.printStackTrace();
+    }
+
     String ew = (String)GSign.getSelectedItem();
     if (ew.toUpperCase().equals("W"))
       g *= -1;

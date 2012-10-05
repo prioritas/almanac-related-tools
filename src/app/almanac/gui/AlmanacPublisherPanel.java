@@ -52,6 +52,8 @@ import javax.swing.JProgressBar;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
+import javax.swing.text.NumberFormatter;
+
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
@@ -183,7 +185,8 @@ public class AlmanacPublisherPanel
     deltaTLabel.setText("Delta T:");
     deltaTFormattedTextField.setPreferredSize(new Dimension(60, 20));
     deltaTFormattedTextField.setHorizontalAlignment(JTextField.CENTER);
-    deltaTFormattedTextField.setText(System.getProperty("deltaT", "65.984"));
+    double deltaT = Double.parseDouble(System.getProperty("deltaT", "65.984"));
+    deltaTFormattedTextField.setText(((NumberFormatter)deltaTFormattedTextField.getFormatter()).getFormat().format(deltaT));
 
     fileLabel.setText("File to generate:");
     progressBar.setIndeterminate(false);

@@ -18,9 +18,12 @@ import java.awt.event.MouseEvent;
 import java.util.EventObject;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JFormattedTextField;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
+
+import javax.swing.text.NumberFormatter;
 
 import nauticalalmanac.Anomalies;
 import nauticalalmanac.Context;
@@ -47,8 +50,8 @@ public class PlanetariumPanel
   private JButton spinButton;
   private JCheckBox transparentCheckBox;
   private JButton setValuesButton;
-  private JTextField leftRight;
-  private JTextField foreAft;
+  private JFormattedTextField leftRight;
+  private JFormattedTextField foreAft;
 
   private boolean videoHasBeenPlayed = false;
   
@@ -63,9 +66,9 @@ public class PlanetariumPanel
     zoomOutButton = new JButton();
     spinButton = new JButton();
     transparentCheckBox = new JCheckBox();
-    leftRight = new JTextField();
+    leftRight = new JFormattedTextField("00.00");
     leftRight.setPreferredSize(new Dimension(50, 20));
-    foreAft = new JTextField();
+    foreAft = new JFormattedTextField("#0.00");
     foreAft.setPreferredSize(new Dimension(50, 20));
     setValuesButton = new JButton();
     try
@@ -115,9 +118,9 @@ public class PlanetariumPanel
       }
     });
     
-    leftRight.setText("23.0");
+    leftRight.setText(((NumberFormatter)leftRight.getFormatter()).getFormat().format(23.0));
     leftRight.setToolTipText("Left-Right tilt (degrees)");
-    foreAft.setText("40.0");
+    foreAft.setText(((NumberFormatter)foreAft.getFormatter()).getFormat().format(40.0));
     foreAft.setToolTipText("Latitude of the eye (degrees)");
     setValuesButton.setText("Set");
     setValuesButton.addActionListener(new ActionListener() 

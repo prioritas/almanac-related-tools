@@ -15,6 +15,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 
+import java.text.DecimalFormat;
+
 import java.util.EventObject;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -66,9 +68,9 @@ public class PlanetariumPanel
     zoomOutButton = new JButton();
     spinButton = new JButton();
     transparentCheckBox = new JCheckBox();
-    leftRight = new JFormattedTextField("00.00");
+    leftRight = new JFormattedTextField(new DecimalFormat("00.00"));
     leftRight.setPreferredSize(new Dimension(50, 20));
-    foreAft = new JFormattedTextField("#0.00");
+    foreAft = new JFormattedTextField(new DecimalFormat("#0.00"));
     foreAft.setPreferredSize(new Dimension(50, 20));
     setValuesButton = new JButton();
     try

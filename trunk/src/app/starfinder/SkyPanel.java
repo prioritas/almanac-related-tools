@@ -654,9 +654,10 @@ public class SkyPanel
   
   public void chartPanelPaintComponentBefore(Graphics graphics)
   {
+    chartPanel.setSouthL(displayNegativeAltCheckBox.isSelected()?-90:0);
     chartPanel.setWithGrid(displayZenithalGrid);
     
-    if (displayCardinalGrid)
+    if (displayCardinalGrid) // Equatorial
     {
       Color gc = chartPanel.getGridColor();
       Color agc = chartPanel.getAltGridColor();
@@ -675,7 +676,7 @@ public class SkyPanel
       double oh = observerHeading;// + 180d;
       while (oh > 360) oh -= 360d;
       while (oh < 0) oh += 360d;
-      double newLR = colatitude * Math.sin(Math.toRadians((oh)));
+      double newLR =  colatitude * Math.sin(Math.toRadians((oh)));
       double newFA = (colatitude * Math.cos(Math.toRadians((oh))) + EYE_OFFSET);
       
 //    System.out.println("LeftRight:" + newLR + ", ForeAft:" + newFA);
@@ -684,6 +685,7 @@ public class SkyPanel
       chartPanel.setGlobeViewForeAftRotation(newFA);
       chartPanel.redrawGrid(graphics);
   
+      // Reset as it was
       chartPanel.setGridColor(gc);
       chartPanel.setAltGridColor(agc);
       chartPanel.setGlobeViewRightLeftRotation(lr);

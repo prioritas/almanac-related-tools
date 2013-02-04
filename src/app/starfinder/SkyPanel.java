@@ -72,7 +72,7 @@ import nauticalalmanac.Saturn;
 import nauticalalmanac.Star;
 import nauticalalmanac.Venus;
 
-import nmea.event.NMEAListener;
+import nmea.event.NMEAReaderListener;
 
 import nmea.server.ctx.NMEAContext;
 import nmea.server.ctx.NMEADataCache;
@@ -189,7 +189,7 @@ public class SkyPanel
   private JCheckBox nmeaStreamCheckBox = new JCheckBox();
   private JSlider horizonTransparencySlider = new JSlider();
 
-  private transient NMEAListener nmeaListener = null;
+  private transient NMEAReaderListener nmeaListener = null;
   
   private transient CoreEventListener coreListener = new CoreEventListener()
        {
@@ -369,7 +369,7 @@ public class SkyPanel
           // Add/Remove listener
           if (nmeaStreamCheckBox.isSelected())
           {
-            nmeaListener = new NMEAListener()
+            nmeaListener = new NMEAReaderListener()
               {
                 /**
                  * On this event, activate the possibility to read from the NMEA Port.
@@ -413,10 +413,10 @@ public class SkyPanel
                   }
                 }
               };
-            NMEAContext.getInstance().addNMEAListener(nmeaListener);
+            NMEAContext.getInstance().addNMEAReaderListener(nmeaListener);
           }
           else
-            NMEAContext.getInstance().removeNMEAListener(nmeaListener);
+            NMEAContext.getInstance().removeNMEAReaderListener(nmeaListener);
           
         }
       });
@@ -649,7 +649,7 @@ public class SkyPanel
   {
 //  System.out.println("Removing Listeners from Planetarium");
     CoreContext.getInstance().removeApplicationListener(coreListener);
-    NMEAContext.getInstance().removeNMEAListener(nmeaListener);    
+    NMEAContext.getInstance().removeNMEAReaderListener(nmeaListener);    
   }
   
   public void chartPanelPaintComponentBefore(Graphics graphics)

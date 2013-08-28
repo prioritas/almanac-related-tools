@@ -209,7 +209,7 @@ public class SkyPanel
     catch (Exception e) { e.printStackTrace(); }
   }
 
-  private StarFinderEventListener sfel = new StarFinderEventListener()
+  private transient StarFinderEventListener sfel = new StarFinderEventListener()
     {
       public void requestChartPanelRepaint()
       {

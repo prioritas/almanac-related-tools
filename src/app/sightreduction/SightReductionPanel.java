@@ -1,52 +1,54 @@
 package app.sightreduction;
 
+
 import app.almanac.AlmanacComputer;
 
 import app.util.DateTimePanel;
-
 import app.util.PositionPanel;
 
 import astro.calc.GeoPoint;
 
 import calculation.SightReductionUtil;
-
 import calculation.TimeUtil;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-
 import java.awt.Insets;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import java.text.DecimalFormat;
-
 import java.text.SimpleDateFormat;
 
 import java.util.Calendar;
 import java.util.Date;
 
+import java.util.TimeZone;
+
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JEditorPane;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
 import javax.swing.JScrollPane;
-
 import javax.swing.JSeparator;
 
 import nauticalalmanac.Context;
-
 import nauticalalmanac.Core;
 
+import nmea.event.NMEAReaderListener;
+
+import nmea.server.ctx.NMEAContext;
+import nmea.server.ctx.NMEADataCache;
+
+import ocss.nmea.parser.GeoPos;
+import ocss.nmea.parser.UTCDate;
+
 import user.util.GeomUtil;
+
 
 //@MakeFrameAndInternalFrame(RadicalToUse)
 public class SightReductionPanel
@@ -109,6 +111,11 @@ public class SightReductionPanel
   private JLabel zValueLabel = new JLabel();
   private JLabel estAltValueLabel = new JLabel();
   private JLabel intValueLabel = new JLabel();
+
+  private transient NMEAReaderListener nmeaListener = null;
+  private JPanel gpsDataPanel = new JPanel();
+  private JButton getGPSDataButton = new JButton();
+  private BorderLayout borderLayout1 = new BorderLayout();
 
   public SightReductionPanel()
   {
@@ -189,20 +196,37 @@ public class SightReductionPanel
     zValueLabel.setText("-");
     estAltValueLabel.setText("-");
     intValueLabel.setText("-");
-    this.add(datePanel, new GridBagConstraints(0, 0, 2, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(0, 0, 0, 0), 0, 0));
-    this.add(positionPanel, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0, GridBagConstraints.NORTH, GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
-    this.add(dataPanel, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0, GridBagConstraints.NORTH, GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
+    gpsDataPanel.setLayout(borderLayout1);
+    getGPSDataButton.setText("Get Data from GPS");
+    getGPSDataButton.setToolTipText("If a GPS is connected, read its data (Position and UTC)");
+    getGPSDataButton.addActionListener(new ActionListener()
+      {
+        public void actionPerformed(ActionEvent e)
+        {
+          getGPSDataButton_actionPerformed(e);
+        }
+      });
+    this.add(datePanel, new GridBagConstraints(0, 1, 2, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
+          new Insets(0, 0, 0, 0), 0, 0));
+    this.add(positionPanel, new GridBagConstraints(0, 2, 1, 1, 0.0, 0.0, GridBagConstraints.NORTH, GridBagConstraints.BOTH,
+          new Insets(0, 0, 0, 0), 0, 0));
+    this.add(dataPanel, new GridBagConstraints(1, 2, 1, 1, 0.0, 0.0, GridBagConstraints.NORTH, GridBagConstraints.BOTH,
+          new Insets(0, 0, 0, 0), 0, 0));
 
 //  this.add(srButton, new GridBagConstraints(1, 3, 2, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
-    this.add(buttonPanel, new GridBagConstraints(0, 3, 2, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
+    this.add(buttonPanel, new GridBagConstraints(0, 4, 2, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.NONE,
+          new Insets(0, 0, 0, 0), 0, 0));
     buttonPanel.add(srButton, null);
 
     buttonPanel.add(reverseButton, null);
     jScrollPane.getViewport().add(outputEditorPane, null);
     outputPanel.add(jScrollPane, BorderLayout.CENTER);
-    this.add(outputPanel, new GridBagConstraints(0, 8, 2, 1, 0.0, 0.0, GridBagConstraints.NORTH, GridBagConstraints.BOTH, new Insets(3, 0, 0, 0), 0, 71));
-    this.add(jSeparator1, new GridBagConstraints(0, 2, 2, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(3, 0, 3, 0), 0, 0));
-    this.add(jSeparator2, new GridBagConstraints(0, 4, 2, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(3, 0, 3, 0), 0, 0));
+    this.add(outputPanel, new GridBagConstraints(0, 9, 2, 1, 0.0, 0.0, GridBagConstraints.NORTH, GridBagConstraints.BOTH,
+          new Insets(3, 0, 0, 0), 0, 71));
+    this.add(jSeparator1, new GridBagConstraints(0, 3, 2, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
+          new Insets(3, 0, 3, 0), 0, 0));
+    this.add(jSeparator2, new GridBagConstraints(0, 5, 2, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
+          new Insets(3, 0, 3, 0), 0, 0));
 
     correctionPanel.add(hdLabel, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0, GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
     correctionPanel.add(hdValue, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0, GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 10, 0, 0), 0, 0));
@@ -220,7 +244,8 @@ public class SightReductionPanel
     correctionPanel.add(appCorrValue, new GridBagConstraints(1, 3, 1, 1, 0.0, 0.0, GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 10, 0, 0), 0, 0));
     correctionPanel.add(totalCorrectionLabel, new GridBagConstraints(2, 3, 1, 1, 0.0, 0.0, GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
     correctionPanel.add(totalCorrectionValue, new GridBagConstraints(3, 3, 1, 1, 0.0, 0.0, GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 10, 0, 0), 0, 0));
-    this.add(correctionPanel, new GridBagConstraints(1, 5, 1, 1, 0.0, 0.0, GridBagConstraints.NORTH, GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
+    this.add(correctionPanel, new GridBagConstraints(1, 6, 1, 1, 0.0, 0.0, GridBagConstraints.NORTH, GridBagConstraints.BOTH,
+          new Insets(0, 0, 0, 0), 0, 0));
     almanacPanel.add(ghaLabel, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0, GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
     almanacPanel.add(ghaValue, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0, GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 10, 0, 0), 0, 0));
     almanacPanel.add(decLabel, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0, GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
@@ -231,7 +256,8 @@ public class SightReductionPanel
     almanacPanel.add(hpValue, new GridBagConstraints(1, 3, 1, 1, 0.0, 0.0, GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
     almanacPanel.add(moonDistLabel, new GridBagConstraints(0, 4, 1, 1, 0.0, 0.0, GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
     almanacPanel.add(lunarValue, new GridBagConstraints(1, 4, 1, 1, 0.0, 0.0, GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 10, 0, 0), 0, 0));
-    this.add(almanacPanel, new GridBagConstraints(0, 5, 1, 1, 0.0, 0.0, GridBagConstraints.NORTH, GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
+    this.add(almanacPanel, new GridBagConstraints(0, 6, 1, 1, 0.0, 0.0, GridBagConstraints.NORTH, GridBagConstraints.BOTH,
+          new Insets(0, 0, 0, 0), 0, 0));
     deadReckoningPanel.add(observedAltitudeLabel, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0, GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
     deadReckoningPanel.add(obsAltValueLabel, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 5, 0, 0), 0, 0));
     deadReckoningPanel.add(zLabel, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0, GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
@@ -240,7 +266,14 @@ public class SightReductionPanel
     deadReckoningPanel.add(zValueLabel, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 5, 0, 0), 0, 0));
     deadReckoningPanel.add(estAltValueLabel, new GridBagConstraints(1, 2, 1, 1, 0.0, 0.0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 5, 0, 0), 0, 0));
     deadReckoningPanel.add(intValueLabel, new GridBagConstraints(1, 3, 1, 1, 0.0, 0.0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 5, 0, 0), 0, 0));
-    this.add(deadReckoningPanel, new GridBagConstraints(0, 7, 2, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(0, 0, 0, 0), 0, 0));
+    this.add(deadReckoningPanel,
+             new GridBagConstraints(0, 8, 2, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
+          new Insets(0, 0, 0, 0), 0, 0));
+    gpsDataPanel.add(getGPSDataButton, BorderLayout.EAST);
+    this.add(gpsDataPanel,
+             new GridBagConstraints(0, 0, 2, 1, 0.0, 0.0, GridBagConstraints.CENTER,
+                                    GridBagConstraints.HORIZONTAL,
+                                    new Insets(0, 0, 0, 0), 0, 0));
     datePanel.setDate(TimeUtil.getGMT());
     datePanel.setBorder(BorderFactory.createTitledBorder("Date & Time"));
     dataPanel.setBorder(BorderFactory.createTitledBorder("Observation"));
@@ -487,6 +520,58 @@ public class SightReductionPanel
   private void reverseButton_actionPerformed(ActionEvent e)
   {
     sr(true);
+  }
+
+  private boolean positionHasBeenRead = false;
+  private boolean timeHasBeenRead = false;
+  
+  private void getGPSDataButton_actionPerformed(ActionEvent e)
+  {
+    positionHasBeenRead = false;
+    timeHasBeenRead = false;
+    
+    if (nmeaListener == null)
+    {
+      nmeaListener = new NMEAReaderListener()
+        {
+          @Override
+          public void manageNMEAString(String string)
+          {
+            if (!positionHasBeenRead)
+            {
+              GeoPos gps = (GeoPos)NMEAContext.getInstance().getCache().get(NMEADataCache.POSITION, true);
+              if (gps != null)
+              {
+        //      System.out.println("Your fix:" + gps.toString());
+                positionPanel.setPosition(gps.lat, gps.lng);
+                positionHasBeenRead = true;
+              }
+              else
+                System.out.println("No position yet...");
+            }
+            if (!timeHasBeenRead)
+            {
+              UTCDate utcDate = (UTCDate)NMEAContext.getInstance().getCache().get(NMEADataCache.GPS_DATE_TIME);      
+              if (utcDate != null && utcDate.getValue() != null)
+              {
+                // Display it
+                Date d = utcDate.getValue();
+                Calendar cal = Calendar.getInstance();
+                cal.setTime(d);
+                cal.setTimeZone(TimeZone.getTimeZone("Etc/UTC"));                
+                
+                datePanel.setDate(cal);
+                timeHasBeenRead = true;
+              }
+              else
+                System.out.println("No date yet...");
+            }
+          }
+        };
+      NMEAContext.getInstance().addNMEAReaderListener(nmeaListener);
+    }
+//  else
+//    NMEAContext.getInstance().removeNMEAReaderListener(nmeaListener);
   }
 }
 

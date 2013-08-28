@@ -176,6 +176,11 @@ public class DateTimePanel
   {
     Calendar cal = Calendar.getInstance();
     cal.setTime(d);
+    this.setDate(cal);
+  }
+  
+  public void setDate(Calendar cal)
+  {
     int year = cal.get(Calendar.YEAR);
     int month = cal.get(Calendar.MONTH);
     int day = cal.get(Calendar.DAY_OF_MONTH);    

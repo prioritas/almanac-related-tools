@@ -77,7 +77,12 @@ public class PositionPanel extends JPanel
     {
       e.printStackTrace();
     }
-
+  }
+  
+  public void showButton(boolean b)
+  {
+    this.showButton = b;
+    this.repaint();
   }
 
   private void jbInit() throws Exception

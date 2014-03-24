@@ -12,7 +12,7 @@ import java.util.TimeZone;
 
 public class DayLight
 {
-  private final static double latitude =    8;
+  private final static double latitude =    38;
   private final static double longitude = -122;
   
   private final static SimpleDateFormat SDF  = new SimpleDateFormat("MMM-dd");
@@ -35,7 +35,7 @@ public class DayLight
     AstroComputer.calculate();
     double[] rsSun  = AstroComputer.sunRiseAndSet(latitude, longitude);
     double daylight = (rsSun[AstroComputer.UTC_SET_IDX] - rsSun[AstroComputer.UTC_RISE_IDX]);
-    System.out.println(SDF.format(utcCal.getTime()) +  ", Daylight:" + decimalHoursToHMS(daylight));
+    System.out.println(SDF.format(utcCal.getTime()) +  ", Daylight:" + decimalHoursToHMS(daylight, false));
     System.out.println("========================================");
     boolean go = true;
     utcCal.set(Calendar.MONTH, Calendar.JANUARY);
@@ -56,13 +56,17 @@ public class DayLight
       AstroComputer.calculate();
       rsSun  = AstroComputer.sunRiseAndSet(latitude, longitude);
       daylight = (rsSun[AstroComputer.UTC_SET_IDX] - rsSun[AstroComputer.UTC_RISE_IDX]);
-      System.out.println(SDF.format(utcCal.getTime()) +  ", Daylight:" + decimalHoursToHMS(daylight));
+      System.out.println(SDF.format(utcCal.getTime()) +  ", Daylight:" + decimalHoursToHMS(daylight, false));
       utcCal.add(Calendar.DAY_OF_MONTH, 1);
       go = (year == utcCal.get(Calendar.YEAR));
     }   
   }
   
   private static String decimalHoursToHMS(double diff)
+  {
+    return decimalHoursToHMS(diff, true);
+  }
+  private static String decimalHoursToHMS(double diff, boolean withSign)
   {
     double dh = Math.abs(diff);
     String s = "";
@@ -75,10 +79,13 @@ public class DayLight
     remainder = minutes - (int)minutes;
     double seconds = remainder * 60;
     s += (DF2.format((int)seconds) + "s");
-    if (diff < 0)
-      s = "- " + s;
-    else
-      s = "+ " + s;
+    if (withSign)
+    {
+      if (diff < 0)
+        s = "- " + s;
+      else
+        s = "+ " + s;
+    }
     return s.trim();
   }  
 }

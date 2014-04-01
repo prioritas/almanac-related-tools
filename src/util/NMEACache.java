@@ -50,7 +50,7 @@ public class NMEACache
   public void dispatch(String nmeaPayload)
   {
  // System.out.println("[" + nmeaPayload + "]");  
-    if (nmeaPayload.length() > 6)
+    if (nmeaPayload != null && nmeaPayload.length() > 6  && StringParsers.validCheckSum(nmeaPayload))
     {
       String k = nmeaPayload.substring(3, 6);
       if (k.equals("GLL"))
@@ -84,8 +84,11 @@ public class NMEACache
         {
           setCog(rmc.getCog());
           setSog(rmc.getSog());
-          setLat(rmc.getGp().lat);
-          setLng(rmc.getGp().lng);
+          if (rmc.getGp() != null)
+          {
+            setLat(rmc.getGp().lat);
+            setLng(rmc.getGp().lng);
+          }
           setGpsDate(rmc.getRmcDate());
         }
       }

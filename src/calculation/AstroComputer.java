@@ -103,7 +103,7 @@ public class AstroComputer
   //  out.println("Sun HP:" + Context.HPsun);
   //  out.println("Sun SD:" + Context.SDsun);
     double h0 = (Context.HPsun / 3600d) - (Context.SDsun / 3600d); // - (34d / 60d);
-    System.out.println(">>> DEBUG >>> H0:" + h0 + ", Sin Sun H0:" + Math.sin(Math.toRadians(h0)));
+//  System.out.println(">>> DEBUG >>> H0:" + h0 + ", Sin Sun H0:" + Math.sin(Math.toRadians(h0)));
     double cost = Math.sin(Math.toRadians(h0)) - (Math.tan(Math.toRadians(latitude)) * Math.tan(Math.toRadians(Context.DECsun)));
     double t    = Math.acos(cost);
     double lon = longitude;

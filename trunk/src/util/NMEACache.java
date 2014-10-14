@@ -33,6 +33,9 @@ public class NMEACache
   private double bigLog   = 0d;
   private double smallLog = 0d;
   
+  private long started = 0L;
+  private long running = 0L; // Has been running for X ms.
+  
   private static NMEACache instance = null;
 
   private NMEACache()
@@ -148,7 +151,16 @@ public class NMEACache
       }
 //    else
 //      System.out.println("Not managed yet:[" + nmeaPayload + "]");   
+      
+      if (started == 0L)
+        started = System.currentTimeMillis();
+      running = System.currentTimeMillis() - started;
     }
+  }
+  
+  public long getRunning()
+  {
+    return this.running;  
   }
   
   public void setBsp(double bsp)

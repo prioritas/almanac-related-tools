@@ -128,6 +128,19 @@ public class AstroComputer
     return new double[] { utRise, utSet, Z, 360d - Z };    
   }
 
+  /**
+   *
+   * @param latitude   in degrees
+   * @param longitude  in degrees
+   * @return meridian passage time in hours.
+   */
+  public static double getSunMeridianPassageTime(double latitude, double longitude)
+  {
+    double t = (12d - (Context.EoT / 60d));
+    double deltaG = longitude / 15D;
+    return t - deltaG;
+  }
+  
   public static synchronized double[] sunRiseAndSet_wikipedia(double latitude, double longitude)
   {
     double cost = Math.tan(Math.toRadians(latitude)) * Math.tan(Math.toRadians(Context.DECsun));

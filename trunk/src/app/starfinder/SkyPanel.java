@@ -369,7 +369,7 @@ public class SkyPanel
           // Add/Remove listener
           if (nmeaStreamCheckBox.isSelected())
           {
-            nmeaListener = new NMEAReaderListener()
+            nmeaListener = new NMEAReaderListener("SkyPanel", "SkyPanel")
               {
                 /**
                  * On this event, activate the possibility to read from the NMEA Port.

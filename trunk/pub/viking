@@ -1,0 +1,8 @@
+#!/bin/bash
+echo Type $0 -help for help
+CP=../../all-libs/almanactools.jar
+CP=$CP:../../all-libs/nauticalalmanac.jar
+CP=$CP:../../all-libs/geomutil.jar
+CP=$CP:../../all-libs/nmeaparser.jar
+sCP=$CP:../../all-libs/coreutilities.jar
+java -cp $CP app.samples.VikingSunCompass $*
